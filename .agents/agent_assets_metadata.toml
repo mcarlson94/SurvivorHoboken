@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Bpq7ASY_UtuTOlyXv1SUI"
+uri = "file://artifacts/survivor-hoboken/public/images/home-hero.png"
+type = "image"
+title = "Home hero urban puzzle"
+
+[[generated]]
+id = "idIkL3K3CHXNFD9EoOuQq"
+uri = "file://artifacts/survivor-hoboken/public/images/about-hero.png"
+type = "image"
+title = "Game master outdoor challenge"
+
+[[generated]]
+id = "s0n8nsHjUAqOZqd6oyXYu"
+uri = "file://artifacts/survivor-hoboken/public/images/challenges-balance.png"
+type = "image"
+title = "Urban balance challenge"
+
+[[generated]]
+id = "_LbM1dYSFWZp8aru3uuPb"
+uri = "file://artifacts/survivor-hoboken/public/images/challenges-puzzle.png"
+type = "image"
+title = "Ground puzzle urban setting"
+
+[[generated]]
+id = "2Gr8V2pV5JBAWor3-Ipl7"
+uri = "file://artifacts/survivor-hoboken/public/images/private-events.png"
+type = "image"
+title = "Corporate team building challenge"
+
+[[generated]]
+id = "mXg28E6JZ4oaAA3zbOCri"
+uri = "file://artifacts/survivor-hoboken/public/images/season-1.png"
+type = "image"
+title = "Urban survival game background"
+
+[[generated]]
+id = "4jKmYrUORU5O2ixvWDH-g"
+uri = "file://artifacts/survivor-hoboken/public/images/season-2.png"
+type = "image"
+title = "Intense urban survival challenge"
+
+[[generated]]
+id = "CL-P-knCdCLgY6DUvgQ0x"
+uri = "file://artifacts/survivor-hoboken/public/images/season-3.png"
+type = "image"
+title = "Moody urban competition scene"
+
+[[generated]]
+id = "OA5yxAEexns6qwTszGjxh"
+uri = "file://artifacts/survivor-hoboken/public/images/season-4.png"
+type = "image"
+title = "Epic urban game show"
+
+[[generated]]
+id = "IPCN2QXJLGk2BAtQmXar8"
+uri = "file://artifacts/survivor-hoboken/public/images/contact-host.png"
+type = "image"
+title = "Confident game show host"
