@@ -51,9 +51,9 @@ export default function Challenges() {
                 className="relative aspect-video brutal-shadow border-4 border-foreground overflow-hidden"
               >
                 <img 
-                  src="/images/challenges-balance.png" 
-                  alt="Balance Challenge" 
-                  className="w-full h-full object-cover filter contrast-125"
+                  src="/images/challenge-ring-toss.jpeg" 
+                  alt="Ring Toss Challenge at TD Bank Park" 
+                  className="w-full h-full object-cover"
                 />
               </motion.div>
               <motion.div
@@ -64,9 +64,22 @@ export default function Challenges() {
                 className="relative aspect-video brutal-shadow border-4 border-foreground overflow-hidden transform rotate-2"
               >
                 <img 
-                  src="/images/challenges-puzzle.png" 
-                  alt="Puzzle Challenge" 
-                  className="w-full h-full object-cover filter contrast-125"
+                  src="/images/challenge-pinball.jpeg" 
+                  alt="Pinball Challenge" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="relative aspect-video brutal-shadow border-4 border-foreground overflow-hidden transform -rotate-1"
+              >
+                <img 
+                  src="/images/challenge-field.jpeg" 
+                  alt="Field Challenge" 
+                  className="w-full h-full object-cover"
                 />
               </motion.div>
             </div>

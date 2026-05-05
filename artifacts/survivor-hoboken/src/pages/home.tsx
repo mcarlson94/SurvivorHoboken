@@ -38,14 +38,19 @@ export default function Home() {
               Survivor Hoboken is a live reality competition packed with daily challenges, tribal councils, and nonstop strategy — all leading to one local being crowned the Sole Survivor of Hoboken.
             </p>
             
-            <a 
-              href={APPLY_LINK} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="brutal-button inline-block text-xl"
-            >
-              Apply To Play
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/private-events" className="brutal-button inline-block text-xl">
+                Private Events
+              </Link>
+              <a 
+                href={APPLY_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="brutal-button inline-block text-xl bg-background text-foreground"
+              >
+                Apply For Survivor Hoboken
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -173,7 +178,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="brutal-button inline-block text-2xl px-12 py-6 transform rotate-1 hover:rotate-0"
             >
-              Apply To Play Now
+              Apply For Survivor Hoboken
             </a>
           </div>
         </div>
