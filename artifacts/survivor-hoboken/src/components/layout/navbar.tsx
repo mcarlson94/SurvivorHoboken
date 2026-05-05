@@ -39,9 +39,11 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center z-50 group">
-          <span className="font-heading text-2xl tracking-tighter group-hover:text-primary transition-colors">
-            SURVIVOR<br />HOBOKEN
-          </span>
+          <img
+            src="/images/logo.png"
+            alt="Survivor Hoboken"
+            className="h-14 w-auto"
+          />
         </Link>
 
         {/* Desktop Nav */}
