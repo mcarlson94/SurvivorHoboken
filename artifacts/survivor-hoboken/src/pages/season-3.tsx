@@ -82,7 +82,9 @@ export default function Season3() {
           </motion.div>
 
           {/* Instagram Embed */}
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4 flex justify-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">
+            <h4 className="text-2xl font-heading uppercase text-foreground mb-6">Follow on Instagram for news on future seasons</h4>
+            <div className="flex justify-center">
             <blockquote
               className="instagram-media"
               data-instgrm-captioned
@@ -111,19 +113,9 @@ export default function Season3() {
                 </a>
               </div>
             </blockquote>
+            </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">
-            <h4 className="text-2xl font-heading uppercase text-foreground mb-4">Follow on Instagram for news on future seasons</h4>
-            <a
-              href="https://www.instagram.com/survivorhoboken/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading uppercase px-6 py-3 rounded hover:opacity-90 transition-opacity"
-            >
-              @survivorhoboken →
-            </a>
-          </motion.div>
         </div>
       </section>
     </div>
