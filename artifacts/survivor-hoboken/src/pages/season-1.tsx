@@ -1,7 +1,19 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 export default function Season1() {
+  useEffect(() => {
+    if ((window as any).instgrm) {
+      (window as any).instgrm.Embeds.process();
+    } else {
+      const script = document.createElement("script");
+      script.src = "//www.instagram.com/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="w-full pt-20 bg-background min-h-screen">
       <div className="py-16 px-4 border-b border-border">
@@ -66,15 +78,37 @@ export default function Season1() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">
-            <h4 className="text-2xl font-heading uppercase text-foreground mb-4">Follow on Instagram for news on future seasons</h4>
-            <a
-              href="https://www.instagram.com/p/DIIOe8Nthlu/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading uppercase px-6 py-3 rounded hover:opacity-90 transition-opacity"
-            >
-              View on Instagram →
-            </a>
+            <h4 className="text-2xl font-heading uppercase text-foreground mb-6">Follow on Instagram for news on future seasons</h4>
+            <div className="flex justify-center">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/p/DIIOe8Nthlu/?utm_source=ig_embed&utm_campaign=loading"
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: 0,
+                  borderRadius: 3,
+                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: 1,
+                  maxWidth: 540,
+                  minWidth: 326,
+                  padding: 0,
+                  width: "calc(100% - 2px)",
+                }}
+              >
+                <div style={{ padding: 16 }}>
+                  <a
+                    href="https://www.instagram.com/p/DIIOe8Nthlu/?utm_source=ig_embed&utm_campaign=loading"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ background: "#FFFFFF", lineHeight: 0, padding: 0, textAlign: "center", textDecoration: "none", width: "100%", display: "block" }}
+                  >
+                    View this post on Instagram
+                  </a>
+                </div>
+              </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
