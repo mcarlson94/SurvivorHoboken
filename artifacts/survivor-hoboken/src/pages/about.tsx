@@ -38,28 +38,31 @@ export default function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-4"
+              className="grid grid-cols-2 gap-3"
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
-                <img 
-                  src="/images/matt-1.png" 
-                  alt="Matt Carlson" 
-                  className="relative z-10 w-full object-cover border-4 border-foreground"
+              <div className="relative col-span-2">
+                <div className="absolute inset-0 bg-primary translate-x-3 translate-y-3"></div>
+                <img
+                  src="/images/matt-4.jpeg"
+                  alt="Matt Carlson with Hoboken Mike"
+                  className="relative z-10 w-full h-56 object-cover object-top border-4 border-foreground"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <img 
-                  src="/images/matt-2.png" 
-                  alt="Matt Carlson - Survivor Hoboken Day Two" 
-                  className="w-full object-cover border-4 border-foreground"
-                />
-                <img 
-                  src="/images/matt-3.png" 
-                  alt="Matt Carlson reading votes" 
-                  className="w-full object-cover border-4 border-foreground"
-                />
-              </div>
+              <img
+                src="/images/matt-1.png"
+                alt="Matt Carlson"
+                className="w-full h-52 object-cover object-center border-4 border-foreground"
+              />
+              <img
+                src="/images/matt-2.png"
+                alt="Matt Carlson - Survivor Hoboken Day Two"
+                className="w-full h-52 object-cover object-[center_20%] border-4 border-foreground"
+              />
+              <img
+                src="/images/matt-3.png"
+                alt="Matt Carlson reading votes"
+                className="w-full h-52 object-cover object-[center_30%] border-4 border-foreground col-span-2"
+              />
             </motion.div>
             
             <motion.div
