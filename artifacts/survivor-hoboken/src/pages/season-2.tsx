@@ -70,6 +70,13 @@ export default function Season2() {
               <p>T2: Kyle Krause</p>
               <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: Danny Kaplin</p>
             </div>
+            <div className="mt-6">
+              <img
+                src="/images/danny-kaplin.png"
+                alt="Danny Kaplin - Sole Survivor Season 2"
+                className="rounded w-full max-w-sm"
+              />
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">

@@ -25,7 +25,7 @@ export default function SeasonRecaps() {
       id: "SZN 2",
       label: "Season 2",
       status: "ARCHIVE",
-      image: "/images/season-2.png",
+      image: "/images/danny-kaplin.png",
       title: "Sole Survivor: Danny Kaplin",
       desc: "15 players, 3 tribes, the first-ever Auction, and the Shot In The Dark — all in the heat of the summer.",
       href: "/season-2",
