@@ -6,11 +6,11 @@ export default function SeasonRecaps() {
     {
       id: "SZN 4",
       label: "Season 4",
-      status: "CURRENT",
-      image: "/images/season-4.png",
-      title: "April 20th to April 26th",
-      desc: "Applications are now closed. The competition has begun.",
-      href: null,
+      status: "ARCHIVE",
+      image: "/images/nichole-scholl.jpeg",
+      title: "Sole Survivor: Nichole Scholl",
+      desc: "April 20th to April 26th. The competition has concluded.",
+      href: "/season-4",
     },
     {
       id: "SZN 3",

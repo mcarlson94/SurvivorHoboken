@@ -15,6 +15,7 @@ import SeasonRecaps from "@/pages/season-recaps";
 import Season1 from "@/pages/season-1";
 import Season2 from "@/pages/season-2";
 import Season3 from "@/pages/season-3";
+import Season4 from "@/pages/season-4";
 import Contact from "@/pages/contact";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/season-1" component={Season1} />
       <Route path="/season-2" component={Season2} />
       <Route path="/season-3" component={Season3} />
+      <Route path="/season-4" component={Season4} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
