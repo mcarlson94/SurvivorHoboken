@@ -49,6 +49,13 @@ export default function Season1() {
               <p>2nd: Chelsea Altchek</p>
               <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: John Cordone</p>
             </div>
+            <div className="mt-6">
+              <img
+                src="/images/john-cordone.png"
+                alt="John Cordone - Sole Survivor Season 1"
+                className="rounded w-full max-w-sm"
+              />
+            </div>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">

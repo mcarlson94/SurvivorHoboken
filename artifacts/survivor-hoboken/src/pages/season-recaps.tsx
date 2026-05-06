@@ -34,7 +34,7 @@ export default function SeasonRecaps() {
       id: "SZN 1",
       label: "Season 1",
       status: "ARCHIVE",
-      image: "/images/season-1.png",
+      image: "/images/john-cordone.png",
       title: "Sole Survivor: John Cordone",
       desc: "The inaugural season that started it all — 12 strangers from Hoboken and Jersey City competing for the very first time.",
       href: "/season-1",
