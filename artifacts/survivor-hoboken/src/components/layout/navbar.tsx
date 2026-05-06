@@ -32,17 +32,13 @@ export function Navbar() {
   }, [location]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 border-transparent ${
-        scrolled ? "bg-background/95 backdrop-blur-md border-foreground shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-foreground border-b-4 border-primary">
+      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
         <Link href="/" className="flex items-center z-50 group">
           <img
             src="/images/logo.png"
             alt="Survivor Hoboken"
-            className="h-14 w-auto"
+            className="h-18 w-auto"
           />
         </Link>
 
@@ -53,7 +49,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               className={`font-bold text-sm tracking-wide uppercase transition-colors hover:text-primary ${
-                location === link.href ? "text-primary" : "text-foreground"
+                location === link.href ? "text-primary" : "text-background"
               }`}
             >
               {link.label}
@@ -71,7 +67,7 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden z-50 p-2 text-foreground"
+          className="lg:hidden z-50 p-2 text-background"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

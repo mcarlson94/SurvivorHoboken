@@ -23,7 +23,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="w-full pt-20 bg-background min-h-screen">
+    <div className="w-full pt-24 bg-background min-h-screen">
       <div className="container mx-auto px-4 py-20 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-16">
           <motion.div

@@ -150,7 +150,7 @@ const sections = [
 
 export default function RuleBook() {
   return (
-    <div className="w-full pt-20 bg-background min-h-screen">
+    <div className="w-full pt-24 bg-background min-h-screen">
       {/* Hero */}
       <div className="py-20 px-4 text-center border-b-4 border-foreground relative overflow-hidden bg-card">
         <div className="absolute inset-0 opacity-10 bg-[linear-gradient(45deg,#1a1a1a_25%,transparent_25%,transparent_50%,#1a1a1a_50%,#1a1a1a_75%,transparent_75%,transparent_100%)] bg-[length:20px_20px]" />

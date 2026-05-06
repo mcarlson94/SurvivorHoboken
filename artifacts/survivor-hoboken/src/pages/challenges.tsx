@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Challenges() {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full pt-24">
       <div className="bg-primary text-primary-foreground py-20 px-4 border-b-4 border-foreground text-center">
         <div className="container mx-auto max-w-4xl">
           <motion.h1 

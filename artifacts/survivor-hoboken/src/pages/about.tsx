@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full pt-24">
       <div className="bg-foreground text-background py-20 px-4 border-b-4 border-primary">
         <div className="container mx-auto max-w-5xl">
           <motion.h1 

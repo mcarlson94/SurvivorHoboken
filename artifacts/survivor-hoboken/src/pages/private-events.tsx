@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 export default function PrivateEvents() {
   return (
-    <div className="w-full pt-20">
+    <div className="w-full pt-24">
       <div className="bg-secondary text-secondary-foreground py-24 px-4 border-b-4 border-foreground relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">

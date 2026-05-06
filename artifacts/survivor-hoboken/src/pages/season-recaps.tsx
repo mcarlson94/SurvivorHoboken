@@ -42,7 +42,7 @@ export default function SeasonRecaps() {
   ];
 
   return (
-    <div className="w-full pt-20 bg-background min-h-screen">
+    <div className="w-full pt-24 bg-background min-h-screen">
       <div className="py-16 px-4 text-center border-b border-border">
         <motion.h1
           initial={{ opacity: 0, scale: 0.95 }}
