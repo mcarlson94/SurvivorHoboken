@@ -11,6 +11,9 @@ import About from "@/pages/about";
 import Challenges from "@/pages/challenges";
 import RuleBook from "@/pages/rule-book";
 import PrivateEvents from "@/pages/private-events";
+import BirthdayParties from "@/pages/private-events-birthday";
+import CorporateEvents from "@/pages/private-events-corporate";
+import BachelorParties from "@/pages/private-events-bachelor";
 import SeasonRecaps from "@/pages/season-recaps";
 import Season1 from "@/pages/season-1";
 import Season2 from "@/pages/season-2";
@@ -28,6 +31,9 @@ function Router() {
       <Route path="/challenges" component={Challenges} />
       <Route path="/rule-book" component={RuleBook} />
       <Route path="/private-events" component={PrivateEvents} />
+      <Route path="/private-events/birthday" component={BirthdayParties} />
+      <Route path="/private-events/corporate" component={CorporateEvents} />
+      <Route path="/private-events/bachelor" component={BachelorParties} />
       <Route path="/season-recaps" component={SeasonRecaps} />
       <Route path="/season-1" component={Season1} />
       <Route path="/season-2" component={Season2} />
