@@ -16,7 +16,7 @@ export default function SeasonRecaps() {
       id: "SZN 3",
       label: "Season 3",
       status: "ARCHIVE",
-      image: "/images/season-3.png",
+      image: "/images/lj-ruiz.jpeg",
       title: "Sole Survivor: LJ Ruiz",
       desc: "14 players from Hoboken, Jersey City, and Weehawken competed September 8th–14th in an intense battle of alliances and blindsides.",
       href: "/season-3",

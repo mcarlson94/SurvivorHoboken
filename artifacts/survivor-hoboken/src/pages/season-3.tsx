@@ -72,6 +72,13 @@ export default function Season3() {
               <p>2nd: Chris Benvenuto</p>
               <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: LJ RUIZ</p>
             </div>
+            <div className="mt-6">
+              <img
+                src="/images/lj-ruiz.jpeg"
+                alt="LJ Ruiz - Sole Survivor Season 3"
+                className="rounded w-full max-w-sm"
+              />
+            </div>
           </motion.div>
 
           {/* Instagram Embed */}
