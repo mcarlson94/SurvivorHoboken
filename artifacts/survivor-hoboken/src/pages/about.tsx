@@ -33,19 +33,33 @@ export default function About() {
 
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative"
+              className="space-y-4"
             >
-              <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 brutal-shadow"></div>
-              <img 
-                src="/images/about-hero.png" 
-                alt="Matt Carlson facilitating" 
-                className="relative z-10 w-full h-full object-cover border-4 border-foreground filter contrast-125"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
+                <img 
+                  src="/images/matt-1.png" 
+                  alt="Matt Carlson" 
+                  className="relative z-10 w-full object-cover border-4 border-foreground"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="/images/matt-2.png" 
+                  alt="Matt Carlson - Survivor Hoboken Day Two" 
+                  className="w-full object-cover border-4 border-foreground"
+                />
+                <img 
+                  src="/images/matt-3.png" 
+                  alt="Matt Carlson reading votes" 
+                  className="w-full object-cover border-4 border-foreground"
+                />
+              </div>
             </motion.div>
             
             <motion.div
