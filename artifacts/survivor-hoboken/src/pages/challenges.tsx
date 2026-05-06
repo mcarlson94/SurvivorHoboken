@@ -15,6 +15,79 @@ export default function Challenges() {
         </div>
       </div>
 
+      <section className="py-24 px-4 bg-background border-b-4 border-foreground">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-heading uppercase inline-block border-b-4 border-primary pb-2">
+              Real Challenges from the Game
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative border-4 border-foreground brutal-shadow overflow-hidden"
+            >
+              <img
+                src="/images/challenge-snake-maze.jpeg"
+                alt="Giant Snake Mazes"
+                className="w-full h-80 object-cover object-center"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-foreground/90 px-6 py-4 flex items-baseline justify-between flex-wrap gap-2">
+                <span className="font-heading text-2xl uppercase text-background">Giant Snake Mazes</span>
+                <span className="text-primary font-bold text-sm uppercase tracking-widest">As seen on Survivor SZN 28</span>
+              </div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { src: "/images/challenge-bow-diddley-1.jpeg", alt: "Bow Diddley Balancing" },
+                { src: "/images/challenge-bow-diddley-2.jpeg", alt: "Bow Diddley Balancing" },
+              ].map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative border-4 border-foreground brutal-shadow overflow-hidden"
+                >
+                  <img src={img.src} alt={img.alt} className="w-full h-72 object-cover object-top" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-foreground/90 px-6 py-4 flex items-baseline justify-between flex-wrap gap-2">
+                    <span className="font-heading text-xl uppercase text-background">Bow Diddley Balancing</span>
+                    <span className="text-primary font-bold text-sm uppercase tracking-widest">As seen on Survivor 50</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { src: "/images/challenge-table-maze.png", alt: "Table Maze", name: "Table Maze", season: "SZN 35" },
+                { src: "/images/challenge-stacked-up.png", alt: "Stacked Up", name: "Stacked Up", season: "Survivor 48" },
+              ].map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="relative border-4 border-foreground brutal-shadow overflow-hidden"
+                >
+                  <img src={img.src} alt={img.alt} className="w-full h-72 object-cover object-center" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-foreground/90 px-6 py-4 flex items-baseline justify-between flex-wrap gap-2">
+                    <span className="font-heading text-xl uppercase text-background">{img.name}</span>
+                    <span className="text-primary font-bold text-sm uppercase tracking-widest">As seen on {img.season}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-start mb-24">
