@@ -74,14 +74,36 @@ export default function Season4() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">
             <h4 className="text-2xl font-heading uppercase text-foreground mb-6">Follow on Instagram for news on future seasons</h4>
-            <a
-              href="https://www.instagram.com/survivorhoboken/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading uppercase px-6 py-3 rounded hover:opacity-90 transition-opacity"
-            >
-              @survivorhoboken →
-            </a>
+            <div className="flex justify-center">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/reel/DXokac4kw3l/?utm_source=ig_embed&utm_campaign=loading"
+                data-instgrm-version="14"
+                style={{
+                  background: "#FFF",
+                  border: 0,
+                  borderRadius: 3,
+                  boxShadow: "0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15)",
+                  margin: 1,
+                  maxWidth: 540,
+                  minWidth: 326,
+                  padding: 0,
+                  width: "calc(100% - 2px)",
+                }}
+              >
+                <div style={{ padding: 16 }}>
+                  <a
+                    href="https://www.instagram.com/reel/DXokac4kw3l/?utm_source=ig_embed&utm_campaign=loading"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ background: "#FFFFFF", lineHeight: 0, padding: 0, textAlign: "center", textDecoration: "none", width: "100%", display: "block" }}
+                  >
+                    View this post on Instagram
+                  </a>
+                </div>
+              </blockquote>
+            </div>
           </motion.div>
         </div>
       </section>
