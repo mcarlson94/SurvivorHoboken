@@ -77,6 +77,14 @@ const TESTIMONIALS = [
     photo: "/images/testimonial-brian.webp",
     initial: "B",
   },
+  {
+    pull: "10/10 — Absolutely would do again.",
+    quote: "I've truly never done anything like this, and I really surprised myself throughout the game.",
+    name: "Aliya",
+    label: "Season 4",
+    photo: "/images/testimonial-aliya.webp",
+    initial: "A",
+  },
 ];
 
 function TestimonialCarousel() {
