@@ -64,10 +64,10 @@ export default function Home() {
     <div className="w-full bg-background">
 
       {/* ── 1. HERO ──────────────────────────────────────────── */}
-      <section className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center justify-center text-center overflow-hidden">
         <img
-          src="/images/home-hero.png"
-          alt="Live Survivor Hoboken immunity challenge in action"
+          src="/images/challenge-snake-maze.jpeg"
+          alt="Players competing head-to-head in a live Survivor Hoboken snake maze immunity challenge"
           loading="eager"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
@@ -77,7 +77,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative z-10 px-4 max-w-4xl mx-auto"
+          className="relative z-10 px-4 max-w-4xl mx-auto pt-24"
         >
           <img
             src="/images/logo.png"
