@@ -24,6 +24,9 @@ const challenges = [
     alt: "Table Maze",
     name: "Table Maze",
     season: "As seen on Survivor SZN 35",
+    description: "Precision under pressure. Tribes tilt and steer three balls through a winding maze — first to clear all three takes it. Mount it on a table and players compete standing, which makes it perfect for tighter indoor spaces. Run two and four can play at once.",
+    blurb: "Two minutes of pure precision — and panic.",
+    tags: ["2–4 PER TEAM", "~2 MIN", "TABLETOP", "INDOOR FRIENDLY"],
   },
   {
     src: "/images/ch-bow-diddley.png",
