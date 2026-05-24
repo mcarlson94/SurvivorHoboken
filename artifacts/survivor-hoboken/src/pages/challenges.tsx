@@ -36,7 +36,7 @@ const challenges = [
     season: "As seen on Survivor 50",
     description: "Steady hands win. Players balance a ball on the bow and hold it as long as they can — drop it and you're out, last castaway standing wins. Want it harder? We have them balance on one foot and switch. Six can compete side by side.",
     blurb: "Hold steady. Last one standing takes it.",
-    tags: ["SOLO ELIMINATION", "6 BOWS", "UP TO 10 MIN", "SCALABLE"],
+    tags: ["SOLO ELIMINATION", "6 BOWS", "UP TO 10 MIN"],
   },
   {
     src: "/images/survivor-hoboken-stacked-up-challenge.webp",
