@@ -6,6 +6,9 @@ const challenges = [
     alt: "Giant Snake Mazes",
     name: "Giant Snake Mazes",
     season: "As seen on Survivor SZN 28",
+    description: "Two eight-foot snakes — blue and yellow — stand head to head. Working the pulleys, castaways guide a ball up through every twist and curve to the top. First to land it claims immunity. Sets up in minutes and reads from clear across the room.",
+    blurb: "Easy to start, maddening to finish.",
+    tags: ["HEAD-TO-HEAD", "BLUE vs. YELLOW", "INDOOR OR OUTDOOR"],
   },
   {
     src: "/images/ch-a-bit-tipsy.png",
