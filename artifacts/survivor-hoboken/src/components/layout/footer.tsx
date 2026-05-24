@@ -24,25 +24,6 @@ export function Footer() {
   return (
     <>
       <footer className="bg-secondary text-secondary-foreground border-t-4 border-foreground mt-24">
-        <div className="bg-primary py-10 px-4">
-          <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="font-heading text-2xl md:text-3xl uppercase text-white leading-tight">
-                Ready to Plan Your Event?
-              </p>
-              <p className="text-white/80 font-medium mt-1">
-                Book a free 15-min call and let&apos;s make it happen.
-              </p>
-            </div>
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="shrink-0 bg-white text-primary font-heading text-lg uppercase px-8 py-4 border-4 border-white hover:bg-transparent hover:text-white transition-colors"
-            >
-              Book a 15-Min Call
-            </button>
-          </div>
-        </div>
-
         <div className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
