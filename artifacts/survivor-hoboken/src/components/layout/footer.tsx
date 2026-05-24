@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "wouter";
+import { BookingModal } from "@/components/booking-modal";
 
 function InstagramIcon() {
   return (
@@ -17,7 +19,10 @@ function TikTokIcon() {
 }
 
 export function Footer() {
+  const [bookingOpen, setBookingOpen] = useState(false);
+
   return (
+    <>
     <footer className="bg-secondary text-secondary-foreground py-16 border-t-4 border-foreground mt-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -49,14 +54,12 @@ export function Footer() {
             <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
               <li><Link href="/private-events" className="hover:text-primary transition-colors">Private Events</Link></li>
               <li>
-                <a
-                  href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                <button
+                  onClick={() => setBookingOpen(true)}
+                  className="hover:text-primary transition-colors uppercase tracking-wider text-sm font-bold"
                 >
                   Book a 15-Min Call
-                </a>
+                </button>
               </li>
               <li>
                 <a href="mailto:Tribal@survivorhoboken.com" className="hover:text-primary transition-colors">
@@ -103,5 +106,8 @@ export function Footer() {
         </div>
       </div>
     </footer>
+
+    <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+    </>
   );
 }
