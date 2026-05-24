@@ -26,7 +26,7 @@ export default function OneDayGame516() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-heading uppercase text-foreground"
           >
-            One Day Game 5/16/26
+            Survivor Hoboken One Day Game 5/16/26
           </motion.h1>
         </div>
       </div>
