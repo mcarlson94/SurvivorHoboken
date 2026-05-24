@@ -104,6 +104,73 @@ export default function PrivateEvents() {
             ))}
           </div>
 
+          {/* ── FAN ENGAGEMENT ──────────────────────────────────── */}
+          <div className="mt-20">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-foreground text-background border-4 border-foreground brutal-shadow p-8 md:p-12"
+            >
+              <div className="flex flex-col md:flex-row md:items-start gap-8">
+                <div className="flex-1">
+                  <p className="text-primary font-heading text-sm uppercase tracking-widest mb-3">
+                    Large-Scale Activations
+                  </p>
+                  <h2 className="text-4xl md:text-5xl font-heading uppercase text-background leading-tight mb-6">
+                    Fan Engagement<br />Experiences
+                  </h2>
+                  <p className="text-background/80 text-lg leading-relaxed mb-6">
+                    Bring Survivor Hoboken to your venue as a live fan activation. We set up real immunity challenges on the concourse, field, or floor and let fans compete head-to-head in front of a crowd.
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 mb-8">
+                    {[
+                      "Stadiums & Arenas",
+                      "Survivor Nights",
+                      "Festivals & Fairs",
+                      "Trade Shows",
+                      "Brand Activations",
+                      "Sponsor Events",
+                    ].map((venue) => (
+                      <div key={venue} className="flex items-center gap-3">
+                        <div className="w-3 h-3 bg-primary shrink-0" />
+                        <span className="text-background/90 font-medium text-sm">{venue}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <a
+                    href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-primary text-white font-heading uppercase tracking-widest px-8 py-4 text-sm hover:opacity-90 transition-opacity"
+                  >
+                    Book a Fan Activation
+                  </a>
+                </div>
+
+                {/* Somerset Patriots callout */}
+                <div className="md:w-72 shrink-0">
+                  <div className="bg-background border-4 border-primary p-6 relative">
+                    <div className="absolute -top-4 left-6 bg-primary text-white font-heading text-xs uppercase tracking-widest px-3 py-1">
+                      As Seen At
+                    </div>
+                    <p className="text-foreground font-heading text-2xl uppercase mt-2 mb-3">
+                      Somerset Patriots
+                    </p>
+                    <p className="text-foreground/70 text-sm leading-relaxed">
+                      We brought live Survivor challenges to the concourse at a Somerset Patriots game, giving fans a real immunity challenge experience between innings.
+                    </p>
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <p className="text-primary font-heading text-xs uppercase tracking-widest">
+                        Minor League Baseball ✦ TD Bank Ballpark
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
           <div className="mt-20 bg-card border-4 border-foreground p-8 md:p-12 brutal-shadow relative">
             <div className="absolute -top-6 right-8 bg-primary text-white font-heading text-3xl px-6 py-2 brutal-shadow transform rotate-2">
               WHAT'S INCLUDED
