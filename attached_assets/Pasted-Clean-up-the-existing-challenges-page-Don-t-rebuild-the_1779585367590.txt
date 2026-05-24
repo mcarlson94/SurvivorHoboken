@@ -1,0 +1,49 @@
+Clean up the existing /challenges/ page
+Don't rebuild the page — keep the current content, brand colors, and overall vibe. Apply these
+specific cleanups to make it feel more minimal and gallery-like. The reference feel is a calm,
+photo-led showcase where one simple layout unit repeats down the page with lots of breathing room.
+1. Strip decoration off the challenge cards
+
+Remove card borders, background fill boxes, and drop shadows from each challenge item. Each
+challenge should sit directly on the page background as: one photo + the name + one short
+paragraph + one row of small tags. Nothing boxing it in.
+If there's a badge/pill on each card beyond the small spec tags, keep it minimal (one small
+gold season badge max) or remove it.
+
+2. Make every challenge the SAME repeating unit
+
+Use one identical layout for every challenge (e.g. photo on one side, text on the other,
+alternating left/right down the page on desktop; stacked on mobile). No challenge should have a
+different style from the others. Consistency is what reads as "clean."
+
+3. Standardize the photos
+
+Give every gallery photo the SAME aspect ratio and the same rounded-corner radius, using
+object-fit: cover so they all crop to a consistent shape. Right now mismatched image sizes make
+the page look ragged. Pick one ratio (4:3 or 3:2) and apply it to all.
+
+4. Add breathing room
+
+Increase vertical spacing between challenges significantly — each one should feel like its own
+section with clear empty space above and below (think 80–120px between items on desktop).
+Add comfortable padding so text never crowds the photo edge.
+
+5. Tighten the type hierarchy to two levels
+
+Challenge name: large serif heading.
+Description: smaller, plain sans-serif body, normal weight, muted slightly from pure white.
+The small spec tags: one consistent style (small outlined pills, same size and color for all).
+Remove any extra font sizes/weights beyond these. Two clear levels only.
+
+6. Calm the spec tags
+
+All tags identical style: small, thin outline or low-contrast fill, uppercase or sentence case —
+pick one and apply to all. They should read as quiet metadata, not buttons.
+
+7. Keep it restrained overall
+
+Limit accent color (gold/red) to small touches — the season badge and maybe a thin divider.
+The page is mostly dark background + photos + off-white text. Let the photos be the color.
+
+Apply these to the existing page and show me the result. Don't change the copy or which
+challenges are listed.
