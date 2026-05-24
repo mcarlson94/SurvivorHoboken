@@ -4,8 +4,8 @@ import { Link } from "wouter";
 export default function SeasonRecaps() {
   const seasons = [
     {
-      id: "ONE DAY",
-      label: "One Day Game — May 16, 2025",
+      id: "ONE DAY 5/16/26",
+      label: "One Day Game — May 16, 2026",
       status: "ARCHIVE",
       image: "/images/survivor-hoboken-winner-jacqui-may-2025.webp",
       title: "Sole Survivor: Jacqui",
