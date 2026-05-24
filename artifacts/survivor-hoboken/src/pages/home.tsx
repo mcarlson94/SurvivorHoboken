@@ -111,8 +111,9 @@ const TESTIMONIALS = [
   },
 ];
 
+const PAD = 3; // clones at each end — must be >= max cardsVisible
+
 function TestimonialCarousel() {
-  const [index, setIndex] = useState(0);
   const [cardsVisible, setCardsVisible] = useState(3);
   const n = TESTIMONIALS.length;
 
@@ -129,23 +130,46 @@ function TestimonialCarousel() {
 
   const cardWidth = 100 / cardsVisible;
 
-  const prev = useCallback(() => setIndex((i) => (i - 1 + n) % n), [n]);
-  const next = useCallback(() => setIndex((i) => (i + 1) % n), [n]);
+  // PAD clones before + real cards + PAD clones after
+  const looped = [
+    ...Array.from({ length: PAD }, (_, i) => TESTIMONIALS[(n - PAD + i + n) % n]),
+    ...TESTIMONIALS,
+    ...Array.from({ length: PAD }, (_, i) => TESTIMONIALS[i % n]),
+  ];
+  const totalLen = looped.length; // n + 2*PAD
+
+  // displayOffset: PAD = first real card, PAD+n-1 = last real card
+  const [displayOffset, setDisplayOffset] = useState(PAD);
+  const [instant, setInstant] = useState(false);
+
+  // After animating into a clone zone, silently teleport to matching real card
+  useEffect(() => {
+    if (instant) return;
+    let target: number | null = null;
+    if (displayOffset < PAD) target = displayOffset + n;
+    else if (displayOffset >= PAD + n) target = displayOffset - n;
+    if (target === null) return;
+    const id = setTimeout(() => {
+      setInstant(true);
+      setDisplayOffset(target!);
+    }, 460);
+    return () => clearTimeout(id);
+  }, [displayOffset, instant, n]);
+
+  // Drop the instant flag after one paint so next move animates normally
+  useEffect(() => {
+    if (!instant) return;
+    const id = requestAnimationFrame(() => setInstant(false));
+    return () => cancelAnimationFrame(id);
+  }, [instant]);
+
+  const prev = useCallback(() => setDisplayOffset((d) => d - 1), []);
+  const next = useCallback(() => setDisplayOffset((d) => d + 1), []);
 
   useEffect(() => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
   }, [next]);
-
-  // Pad with 2 clones at each end for seamless looping
-  const looped = [
-    TESTIMONIALS[n - 2],
-    TESTIMONIALS[n - 1],
-    ...TESTIMONIALS,
-    TESTIMONIALS[0],
-    TESTIMONIALS[1],
-  ];
-  const offset = index + 2;
 
   return (
     <section className="py-16 md:py-24 px-4 border-t border-border bg-foreground">
@@ -159,20 +183,20 @@ function TestimonialCarousel() {
           From the players
         </motion.h2>
 
-        {/* Arrows sit outside overflow-hidden; px-10 gives them room on mobile */}
+        {/* px-10 gives arrows room on mobile without overflowing the section */}
         <div className="relative px-10 md:px-0">
           <div className="overflow-hidden">
             <motion.div
               className="flex"
-              animate={{ x: `-${offset * (100 / looped.length)}%` }}
-              transition={{ duration: 0.45, ease: "easeInOut" }}
-              style={{ width: `${looped.length * cardWidth}%` }}
+              animate={{ x: `-${displayOffset * (100 / totalLen)}%` }}
+              transition={instant ? { duration: 0 } : { duration: 0.45, ease: "easeInOut" }}
+              style={{ width: `${totalLen * cardWidth}%` }}
             >
               {looped.map((t, i) => (
                 <div
                   key={i}
                   className="px-2 md:px-3"
-                  style={{ width: `${100 / looped.length}%` }}
+                  style={{ width: `${100 / totalLen}%` }}
                 >
                   <div className="bg-background rounded-sm p-5 md:p-8 flex flex-col items-center text-center h-full">
                     <img
@@ -197,7 +221,6 @@ function TestimonialCarousel() {
             </motion.div>
           </div>
 
-          {/* Arrows — inside px-10 gutter on mobile, extended outside on desktop */}
           <button
             onClick={prev}
             aria-label="Previous testimonial"
