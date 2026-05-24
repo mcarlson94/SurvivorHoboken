@@ -1,0 +1,22 @@
+Update the existing Corporate Events page on SurvivorHoboken.com. Do NOT rebuild from scratch — keep the current styling, layout, and especially these two existing sections fully intact:
+
+The challenges slider/carousel (keep as-is)
+The "What People Are Saying" testimonials section (keep as-is)
+
+The goal of this update is to make our signature three-phase corporate format clear, while emphasizing we're flexible and adapt to any company's size and needs.
+Add/update a "Our Signature Corporate Format" section presenting this as our standard structure — three phases:
+
+Phase 1 — Tribes Form (~90 min): Players draw buffs, split into five tribes of six. Head-to-head tribal challenges (balance, dexterity, coordination). Winning tribes earn fire tokens for every member. Team building, in tribes.
+Phase 2 — Stations Open (~60 min): Tribes dissolve, every player for themselves. Open-floor individual stations (puzzles, snake mazes, stacked up, slide puzzles). Rotate freely, compete head-to-head, earn fire tokens solo. Rolling leaderboard.
+Phase 3 — Final Six (~75 min): Top fire token earners advance to the finale. Everyone else becomes the live audience. The finale can run as a pure challenge gauntlet (immunity rounds, no vote-outs) OR a full Tribal Council format with votes — depending on the group. Full Probst-mode finale, your way.
+Include a short note on Fire Tokens as the scoring through-line across all phases.
+
+Add/update a "Built for Your Team" flexibility callout — make it visible, not buried. Core message: the three-phase format is our proven default, but we scale and adapt it to your company.
+
+Group size: Optimized for ~30, routinely run 20–50, can build larger formats (more tribes, more stations, expanded finale) for bigger companies.
+Time: Standard 3–4 hours, can compress or extend.
+Finale style: Challenge-only or full vote-out Tribal Council — client's choice.
+Custom elements: Company-branded buffs, themed tribe names, custom challenges.
+Frame as: "This is how we run it — and we'll happily reshape it around your headcount, timeline, and goals."
+
+Keep all copy easy for me to edit in the code, mobile-responsive, and matching the existing page's visual style. Do not remove or restyle the challenges slider or testimonials section.

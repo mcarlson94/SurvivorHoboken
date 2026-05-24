@@ -150,31 +150,82 @@ export default function CorporateEvents() {
 
           <ChallengeSlider />
 
-          <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">How It Works</h2>
-          <div className="space-y-10 mb-16">
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-xl font-heading uppercase mb-3">1. We Plan Your Event (15-30 min call)</h3>
-              <p className="text-foreground/80">We discuss your goals, group size, location preferences, and any special requests. Want custom challenges related to your industry? We can do that.</p>
+          <h2 className="text-3xl md:text-4xl font-heading uppercase mb-4">Our Signature Corporate Format</h2>
+          <p className="text-lg font-medium text-foreground/80 max-w-3xl mb-10">
+            This is our proven structure for corporate groups. Three phases, one scoring system, and a finale your team will talk about for years.
+          </p>
+
+          <div className="space-y-6 mb-8">
+            <div className="border-4 border-foreground brutal-shadow p-6 md:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+                <span className="bg-primary text-white font-heading text-sm uppercase px-3 py-1 w-fit">Phase 1</span>
+                <span className="text-foreground/50 font-bold text-sm uppercase tracking-wide">~90 min</span>
+              </div>
+              <h3 className="font-heading text-2xl uppercase mb-3">Tribes Form</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Players draw buffs and split into tribes of six. Tribes compete head-to-head in physical and coordination challenges: balance, dexterity, teamwork. Every member of a winning tribe earns fire tokens. This phase is pure team building: you win together or you lose together.
+              </p>
             </div>
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-xl font-heading uppercase mb-3">2. We Show Up and Set Up</h3>
-              <p className="text-foreground/80">We arrive early to transform your venue into Survivor. Challenges are prepped and props are placed.</p>
+
+            <div className="border-4 border-foreground brutal-shadow p-6 md:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+                <span className="bg-primary text-white font-heading text-sm uppercase px-3 py-1 w-fit">Phase 2</span>
+                <span className="text-foreground/50 font-bold text-sm uppercase tracking-wide">~60 min</span>
+              </div>
+              <h3 className="font-heading text-2xl uppercase mb-3">Stations Open</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                Tribes dissolve. Every player is now on their own. Individual skill stations open across the floor: puzzles, snake mazes, stacked up, slide puzzles. Players rotate freely, challenge each other head-to-head, and earn fire tokens solo. A rolling leaderboard keeps the pressure on.
+              </p>
             </div>
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="text-xl font-heading uppercase mb-3">3. The Experience Begins</h3>
-              <ul className="space-y-2 text-foreground/80 mt-2">
-                {[
-                  "Welcome & Tribe Division – Teams are formed, buffs distributed",
-                  "Challenge Series – 4-6 challenges based on your time frame",
-                  "Final Challenge – Winner-takes-all showdown",
-                  "Closing Ceremony – Winners crowned, debrief option available",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <div className="w-3 h-3 bg-primary shrink-0 mt-1.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+
+            <div className="border-4 border-foreground brutal-shadow p-6 md:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+                <span className="bg-primary text-white font-heading text-sm uppercase px-3 py-1 w-fit">Phase 3</span>
+                <span className="text-foreground/50 font-bold text-sm uppercase tracking-wide">~75 min</span>
+              </div>
+              <h3 className="font-heading text-2xl uppercase mb-3">Final Six</h3>
+              <p className="text-foreground/80 leading-relaxed">
+                The top fire token earners advance to the finale. Everyone else becomes the live audience and jury. The finale runs your way: a pure challenge gauntlet with immunity rounds and no vote-outs, or a full Tribal Council format with votes and a Sole Survivor crowned at the end. Full Probst-mode energy, either way.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-foreground text-background p-6 border-l-4 border-primary mb-16">
+            <p className="font-heading text-lg uppercase mb-1">Fire Tokens</p>
+            <p className="text-background/75 leading-relaxed">
+              Fire tokens are the scoring currency that runs through all three phases. Earn them in tribal challenges, earn them at individual stations, and carry them into the finale. The player who accumulates the most has the best shot at advancing — but the finale is where it all gets decided.
+            </p>
+          </div>
+
+          <div className="bg-card border-4 border-foreground brutal-shadow p-8 mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading uppercase mb-3">Built for Your Team</h2>
+            <p className="text-lg font-medium text-foreground/80 mb-8">
+              The three-phase format is our proven default. We'll happily reshape it around your headcount, timeline, and goals.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  label: "Group Size",
+                  body: "Optimized for around 30 players. We routinely run events for 20 to 50, and can build out larger formats with more tribes, more stations, and an expanded finale for bigger companies.",
+                },
+                {
+                  label: "Time",
+                  body: "Standard format runs 3 to 4 hours. We can compress it for a tight schedule or extend it for a full-day experience.",
+                },
+                {
+                  label: "Finale Style",
+                  body: "Challenge-only gauntlet with no vote-outs, or a full Tribal Council with live votes and a Sole Survivor. Your call — we run both at the same level.",
+                },
+                {
+                  label: "Custom Elements",
+                  body: "Company-branded buffs, themed tribe names, and custom challenges built around your team or industry. These are available as add-ons.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col gap-1">
+                  <p className="font-heading uppercase text-base text-primary">{item.label}</p>
+                  <p className="text-foreground/80 leading-relaxed">{item.body}</p>
+                </div>
+              ))}
             </div>
           </div>
 
