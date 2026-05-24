@@ -310,9 +310,6 @@ export default function Home() {
             </a>
           </div>
 
-          <p className="text-white/50 text-sm uppercase tracking-widest font-bold">
-            Serving the NYC &amp; NJ metro area
-          </p>
         </motion.div>
       </section>
 
