@@ -70,6 +70,14 @@ const TESTIMONIALS = [
     initial: "C",
   },
   {
+    pull: "\u201C10/10 \u2014 Absolutely would do again.\u201D",
+    quote: "I've truly never done anything like this, and I really surprised myself throughout the game.",
+    name: "Aliya",
+    label: "Season 4",
+    photo: "/images/testimonial-aliya.webp",
+    initial: "A",
+  },
+  {
     pull: "\u201COne of the most unexpected experiences of my life.\u201D",
     quote: "I met such fantastic people and never imagined I'd become so invested. Would play over and over if I could.",
     name: "Brian",
@@ -78,12 +86,12 @@ const TESTIMONIALS = [
     initial: "B",
   },
   {
-    pull: "\u201C10/10 \u2014 Absolutely would do again.\u201D",
-    quote: "I've truly never done anything like this, and I really surprised myself throughout the game.",
-    name: "Aliya",
-    label: "Season 4",
-    photo: "/images/testimonial-aliya.webp",
-    initial: "A",
+    pull: "\u201COne of the best days of my life.\u201D",
+    quote: "It somehow captured the strategy, chaos, social dynamics, and adrenaline of the actual game while still being incredibly fun and well-run. Something I will never forget.",
+    name: "Jacqui",
+    label: "5/16/26 One-Day Game",
+    photo: "/images/testimonial-jacqui.webp",
+    initial: "J",
   },
   {
     pull: "\u201CAn absolutely unforgettable experience.\u201D",
@@ -100,14 +108,6 @@ const TESTIMONIALS = [
     label: "Survivor Manhattan",
     photo: "/images/testimonial-tyler.webp",
     initial: "T",
-  },
-  {
-    pull: "\u201COne of the best days of my life.\u201D",
-    quote: "It somehow captured the strategy, chaos, social dynamics, and adrenaline of the actual game while still being incredibly fun and well-run. Something I will never forget.",
-    name: "Jacqui",
-    label: "5/16/26 One-Day Game",
-    photo: "/images/testimonial-jacqui.webp",
-    initial: "J",
   },
 ];
 
