@@ -273,6 +273,8 @@ export default function CorporateEvents() {
             </a>
           </div>
 
+          <HubspotBooking />
+
           <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">Frequently Asked Questions</h2>
           <div className="space-y-6 mb-16">
             {faqs.map((faq, i) => (
@@ -295,8 +297,6 @@ export default function CorporateEvents() {
           </div>
         </div>
       </section>
-
-      <HubspotBooking />
     </div>
   );
 }
