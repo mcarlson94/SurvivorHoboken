@@ -7,25 +7,67 @@ import { ReviewsSlider, type Review } from "@/components/reviews-slider";
 
 const GAME_REVIEWS: Review[] = [
   {
-    name: "Tom",
-    label: "Season 2 Player",
-    pull: "\u201CMatt does a phenomenal job hosting.\u201D",
-    quote: "Tribal councils are so well done, and he truly brings the Survivor energy you are looking for.",
-    photo: "/images/testimonial-tom.webp",
-  },
-  {
     name: "Danielle",
-    label: "Season 2 Player",
+    label: "Season 2",
     pull: "\u201C10 out of 10! I had an incredible time.\u201D",
     quote: "It felt like getting all the best parts of the show without having to sleep on the beach.",
     photo: "/images/testimonial-danielle.webp",
   },
   {
+    name: "Karah",
+    label: "Season 2",
+    pull: "\u201COne of the best experiences of my life.\u201D",
+    quote: "I found a community of people who I look forward to continuing to get to know after the game. I can't express how grateful I am for the opportunity.",
+    photo: "/images/testimonial-karah.webp",
+  },
+  {
+    name: "Tom",
+    label: "Season 2",
+    pull: "\u201CMatt does a phenomenal job hosting.\u201D",
+    quote: "Tribal councils are so well done, and he truly brings the Survivor energy you are looking for.",
+    photo: "/images/testimonial-tom.webp",
+  },
+  {
+    name: "Casey",
+    label: "Season 3",
+    pull: "\u201C10/10! 5 stars! Would recommend!\u201D",
+    quote: "Matt does such a great job making every little detail feel like the real Survivor! Added bonus that you get to walk away with new friends!",
+    photo: "/images/testimonial-casey.webp",
+  },
+  {
+    name: "Aliya",
+    label: "Season 4",
+    pull: "\u201C10/10 \u2014 Absolutely would do again.\u201D",
+    quote: "I've truly never done anything like this, and I really surprised myself throughout the game.",
+    photo: "/images/testimonial-aliya.webp",
+  },
+  {
+    name: "Brian",
+    label: "Season 4",
+    pull: "\u201COne of the most unexpected experiences of my life.\u201D",
+    quote: "I met such fantastic people and never imagined I'd become so invested. Would play over and over if I could.",
+    photo: "/images/testimonial-brian.webp",
+  },
+  {
+    name: "Jacqui",
+    label: "5/16/26 One-Day Game",
+    pull: "\u201COne of the best days of my life.\u201D",
+    quote: "It somehow captured the strategy, chaos, social dynamics, and adrenaline of the actual game while still being incredibly fun and well-run. Something I will never forget.",
+    photo: "/images/testimonial-jacqui.webp",
+  },
+  {
+    name: "Jake",
+    label: "5/16/26 One-Day Game",
+    pull: "\u201CAn absolutely unforgettable experience.\u201D",
+    quote: "From the gameplay, to the twists, to the challenges, to the tribals — every moment left us feeling like we were immersed in the game of Survivor.",
+    photo: "/images/testimonial-jake.webp",
+  },
+  {
     name: "Tyler",
-    label: "Manhattan Season 1 Player",
+    label: "Survivor Manhattan",
     pull: "\u201CA lot of fun! I got to play Survivor!\u201D",
     quote: "I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run — and it turned out to be an incredible experience.",
-    photo: null,
+    photo: "/images/testimonial-tyler.webp",
   },
 ];
 
