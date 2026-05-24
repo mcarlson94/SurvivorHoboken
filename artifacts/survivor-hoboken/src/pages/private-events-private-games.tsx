@@ -157,7 +157,7 @@ export default function PrivateGames() {
               Whether it's a one-day showdown or spread across an entire weekend, we'll build the game around your group, your schedule, and your vibe.
             </p>
             <p>
-              Based in the NYC/NJ area, we're willing to travel up and down the East Coast and out to the West Coast for the right group. If you're planning something special, reach out — we'll make it work.
+              Based in the NYC/NJ area, we're willing to travel for the right group. If you're planning something special somewhere outside our backyard, reach out — we'll make it work.
             </p>
           </div>
 
