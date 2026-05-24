@@ -125,17 +125,22 @@ export default function FanEngagement() {
             </div>
           </div>
 
-          {/* Somerset Patriots callout */}
+          {/* Somerset Patriots section */}
           <div className="mb-20">
-            <div className="bg-foreground text-background border-4 border-foreground brutal-shadow p-8 md:p-12">
+            {/* Header with logo */}
+            <div className="bg-foreground text-background border-4 border-foreground brutal-shadow p-8 md:p-12 mb-6">
               <div className="flex flex-col md:flex-row md:items-center gap-8">
                 <div className="flex-1">
                   <p className="text-primary font-heading text-sm uppercase tracking-widest mb-3">
                     As Seen At
                   </p>
-                  <h3 className="text-4xl font-heading uppercase text-background mb-4">
-                    Somerset Patriots
-                  </h3>
+                  <div className="flex items-center gap-6 mb-4">
+                    <img
+                      src="/images/client-logo-1.png"
+                      alt="Somerset Patriots"
+                      className="h-16 w-auto object-contain brightness-0 invert"
+                    />
+                  </div>
                   <p className="text-background/80 text-lg leading-relaxed">
                     We brought live Survivor challenges to the concourse at a Somerset Patriots game, giving fans a real immunity challenge experience between innings. The crowd loved it — real competition, real energy, right on the concourse.
                   </p>
@@ -143,11 +148,45 @@ export default function FanEngagement() {
                     Minor League Baseball ✦ TD Bank Ballpark
                   </p>
                 </div>
-                <div className="md:w-64 shrink-0 bg-background border-4 border-primary p-6 text-center">
-                  <p className="font-heading text-5xl text-primary mb-2">✦</p>
-                  <p className="font-heading text-xl uppercase text-foreground leading-tight">Live Fan Activation</p>
-                  <p className="text-foreground/60 text-sm mt-2">Between-inning challenges open to all fans</p>
-                </div>
+              </div>
+            </div>
+
+            {/* Photo grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+              <div className="col-span-2 md:col-span-2 border-4 border-foreground overflow-hidden">
+                <img
+                  src="/images/private-events-hero.png"
+                  alt="Somerset Patriots fan activation"
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+              <div className="border-4 border-foreground overflow-hidden">
+                <img
+                  src="/images/patriots-snake-maze-sun.png"
+                  alt="Somerset Patriots snake maze challenge"
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+              <div className="border-4 border-foreground overflow-hidden">
+                <img
+                  src="/images/patriots-snake-maze.png"
+                  alt="Somerset Patriots snake maze"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="border-4 border-foreground overflow-hidden">
+                <img
+                  src="/images/patriots-bow-diddley.png"
+                  alt="Somerset Patriots bow diddley challenge"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <div className="border-4 border-foreground overflow-hidden">
+                <img
+                  src="/images/patriots-table-maze-kids.png"
+                  alt="Somerset Patriots table maze kids"
+                  className="w-full h-48 object-cover"
+                />
               </div>
             </div>
           </div>
