@@ -48,7 +48,16 @@ export function Footer() {
             <h3 className="font-heading text-xl mb-4">Connect</h3>
             <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
               <li><Link href="/private-events" className="hover:text-primary transition-colors">Private Events</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li>
+                <a
+                  href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Book a 15-Min Call
+                </a>
+              </li>
               <li>
                 <a href="mailto:Tribal@survivorhoboken.com" className="hover:text-primary transition-colors">
                   Tribal@survivorhoboken.com
