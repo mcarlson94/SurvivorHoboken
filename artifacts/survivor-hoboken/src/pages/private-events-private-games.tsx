@@ -59,14 +59,14 @@ const GAME_REVIEWS: Review[] = [
     name: "Jake",
     label: "5/16/26 One-Day Game",
     pull: "\u201CAn absolutely unforgettable experience.\u201D",
-    quote: "From the gameplay, to the twists, to the challenges, to the tribals — every moment left us feeling like we were immersed in the game of Survivor.",
+    quote: "From the gameplay, to the twists, to the challenges, to the tribals: every moment left us feeling like we were immersed in the game of Survivor.",
     photo: "/images/testimonial-jake.webp",
   },
   {
     name: "Tyler",
     label: "Survivor Manhattan",
     pull: "\u201CA lot of fun! I got to play Survivor!\u201D",
-    quote: "I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run — and it turned out to be an incredible experience.",
+    quote: "I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run, and it turned out to be an incredible experience.",
     photo: "/images/testimonial-tyler.webp",
   },
 ];
@@ -74,7 +74,7 @@ const GAME_REVIEWS: Review[] = [
 const faqs = [
   {
     q: "How far in advance should we book?",
-    a: "Most private games book 4–8 weeks out. That said, we can often accommodate short notice — just reach out and we'll see what we can make work.",
+    a: "Most private games book 4–8 weeks out. That said, we can often accommodate short notice: just reach out and we'll see what we can make work.",
   },
   {
     q: "Where do these games take place?",
@@ -128,7 +128,7 @@ export default function PrivateGames() {
             transition={{ delay: 0.1 }}
             className="text-xl md:text-2xl font-medium leading-relaxed max-w-2xl text-background/90 mb-8"
           >
-            Weekend getaway. Friend trip. Reunion. Whatever the occasion — we'll turn it into a full Survivor experience your group will never forget.
+            Weekend getaway. Friend trip. Reunion. Whatever the occasion: we'll turn it into a full Survivor experience your group will never forget.
           </motion.p>
           <motion.a
             href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
@@ -148,7 +148,7 @@ export default function PrivateGames() {
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-6 text-lg font-medium text-foreground/90 max-w-3xl mb-12">
             <p>
-              You're planning something special — a weekend away with your closest friends, a reunion that finally gets everyone together, a trip where you actually do something unforgettable. Don't settle for the same bars and restaurants.
+              You're planning something special: a weekend away with your closest friends, a reunion that finally gets everyone together, a trip where you actually do something unforgettable. Don't settle for the same bars and restaurants.
             </p>
             <p>
               We bring the full Survivor experience to you: real immunity challenges, tribal councils, hidden idols, alliances, and a professional host who keeps the energy and drama dialed in from start to finish.
@@ -157,7 +157,7 @@ export default function PrivateGames() {
               Whether it's a one-day showdown or spread across an entire weekend, we'll build the game around your group, your schedule, and your vibe.
             </p>
             <p>
-              Based in the NYC/NJ area, we're willing to travel for the right group. If you're planning something special somewhere outside our backyard, reach out — we'll make it work.
+              Based in the NYC/NJ area, we're willing to travel for the right group. If you're planning something special somewhere outside our backyard, reach out and we'll make it work.
             </p>
           </div>
 
@@ -177,7 +177,7 @@ export default function PrivateGames() {
             {[
               {
                 title: "The Full Game",
-                body: "Tribes, challenges, tribal councils, hidden immunity idols, fire-making, and a Sole Survivor crowned at the end. This is the complete Survivor experience — strategic, social, and unforgettable.",
+                body: "Tribes, challenges, tribal councils, hidden immunity idols, fire-making, and a Sole Survivor crowned at the end. This is the complete Survivor experience: strategic, social, and unforgettable.",
               },
               {
                 title: "Multi-Day Adventure",
@@ -185,11 +185,11 @@ export default function PrivateGames() {
               },
               {
                 title: "Challenges Only",
-                body: "No voting, no elimination — just a full day of competitive Survivor challenges with scoring and a champion crowned at the end. Great for mixed groups or anyone who wants pure competition.",
+                body: "No voting, no elimination: just a full day of competitive Survivor challenges with scoring and a champion crowned at the end. Great for mixed groups or anyone who wants pure competition.",
               },
               {
                 title: "Custom Format",
-                body: "Tell us your group size, timeframe, and goals. We'll design the format around you — from 2 hours to 2 days, 8 players to 30+.",
+                body: "Tell us your group size, timeframe, and goals. We'll design the format around you: from 2 hours to 2 days, 8 players to 30+.",
               },
             ].map((item, i) => (
               <div key={i} className="bg-card border-4 border-foreground p-6 brutal-shadow">
