@@ -34,20 +34,6 @@ export default function OneDayGame516() {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-3xl space-y-6 text-lg text-foreground/80 leading-relaxed">
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 }}
-            className="flex justify-center mb-4"
-          >
-            <img
-              src="/images/survivor-hoboken-winner-jacqui-may-2025.webp"
-              alt="Jacqui — Sole Survivor of the Survivor Hoboken One Day Game, May 16 2026"
-              className="rounded max-w-sm w-full"
-              loading="eager"
-            />
-          </motion.div>
-
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
             15 players arrived at 9AM on Saturday 5/16 for the first-ever one-day game in Survivor Hoboken history. Players came from both near and far — one living in the building next to where we started, while others drove over an hour from Central New Jersey to compete. What was expected to be a "shortened" version quickly turned into one of the most intense formats we've ever run.
           </motion.p>
@@ -57,22 +43,18 @@ export default function OneDayGame516() {
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-            Roshan made Survivor Hoboken history at the very first Tribal Council, playing his Shot in the Dark and rolling a six, becoming the first player ever to successfully hit it.
+            Roshan made Survivor Hoboken history at the very first Tribal Council, playing his Shot in the Dark and rolling a six — becoming the first player ever to successfully hit it.
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}>
             As the day unfolded, tribal lines blurred and the strategy picked up fast. In an otherwise clean game where no advantages were successfully played, multiple players were eliminated with advantages still in their pockets. After the merge, the game briefly stabilized as the larger group came together to vote unanimously three straight times, taking out Kayla, Ed, and Josh.
           </motion.p>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="font-semibold text-foreground">
-            But that unity didn't last.
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+            But that unity didn't last. At the Final 5, Tory was blindsided, leaving Jake on the outs with no room for error. He responded by winning his 3rd consecutive individual immunity to secure his spot in the Final 3.
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}>
-            At the Final 5, Tory was blindsided, leaving Jake on the outs with no room for error. He responded by winning his 3rd consecutive individual immunity to secure his spot in the Final 3.
-          </motion.p>
-
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             At Final 4, the remaining players attempted to force a tie and send the game to a challenge, but Jake shut it down, flipping the vote and sending Jona home in a 2-1-1 vote. In the end, the jury rewarded Jacqui for her strong social and strategic game, crowning her the Sole Survivor of the first-ever one-day game in a 4-2-1 final vote.
           </motion.p>
 
@@ -97,6 +79,14 @@ export default function OneDayGame516() {
               <p>3rd: Garret</p>
               <p>2nd: Jake</p>
               <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: Jacqui</p>
+            </div>
+            <div className="mt-6">
+              <img
+                src="/images/survivor-hoboken-winner-jacqui-may-2025.webp"
+                alt="Jacqui — Sole Survivor of the Survivor Hoboken One Day Game, May 16 2026"
+                className="rounded w-full max-w-sm"
+                loading="lazy"
+              />
             </div>
           </motion.div>
 
