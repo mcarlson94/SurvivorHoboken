@@ -64,7 +64,7 @@ export function ChallengeSlider() {
     <div className="mt-16 mb-16">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl md:text-4xl font-heading uppercase">
-          The Challenges
+          Some of Our Challenges
         </h2>
         <div className="flex gap-2">
           <button
