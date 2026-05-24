@@ -66,13 +66,10 @@ export default function PrivateEvents() {
             className="flex-1 relative w-full max-w-md border-4 border-primary md:rotate-3"
           >
             <img
-              src="/images/private-events.png"
-              alt="Private Events Team Building"
+              src="/images/private-events-hero.png"
+              alt="Private Events"
               className="w-full aspect-square object-cover filter contrast-125"
             />
-            <div className="absolute -bottom-4 -left-4 bg-primary text-white font-heading text-xl p-3 transform -rotate-3 hidden md:block">
-              TEAM BUILDING
-            </div>
           </motion.div>
         </div>
       </div>
