@@ -40,17 +40,33 @@ const TESTIMONIALS = [
     pull: "10 out of 10! I had an incredible time.",
     quote: "It felt like getting all the best parts of the show without having to sleep on the beach.",
     name: "Danielle",
-    label: "Season 2 Player",
+    label: "Season 2",
+    photo: "",
     initial: "D",
-    dark: false,
   },
   {
     pull: "One of the best experiences of my life.",
     quote: "I found a community of people who I look forward to continuing to get to know after the game. I can't express how grateful I am for the opportunity.",
-    name: "Anonymous",
+    name: "Karah",
+    label: "Season 2",
+    photo: "",
+    initial: "K",
+  },
+  {
+    pull: "10/10! 5 stars! Would recommend!",
+    quote: "Matt does such a great job making every little detail feel like the real Survivor! Added bonus that you get to walk away with new friends!",
+    name: "Casey",
+    label: "Season 3",
+    photo: "",
+    initial: "C",
+  },
+  {
+    pull: "Matt does a phenomenal job hosting.",
+    quote: "Tribal councils are so well done, and he truly brings the Survivor energy you are looking for.",
+    name: "Tom",
     label: "Player",
-    initial: "P",
-    dark: true,
+    photo: "",
+    initial: "T",
   },
 ];
 
@@ -173,9 +189,17 @@ export default function Home() {
                   "{t.quote}"
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <div className={`w-9 h-9 font-heading flex items-center justify-center rounded-full text-sm ${t.dark ? "bg-foreground text-background" : "bg-primary text-white"}`}>
-                    {t.initial}
-                  </div>
+                  {t.photo ? (
+                    <img
+                      src={t.photo}
+                      alt={t.name}
+                      className="w-10 h-10 rounded-full object-cover border-2 border-primary"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 bg-primary text-white font-heading flex items-center justify-center rounded-full text-sm shrink-0">
+                      {t.initial}
+                    </div>
+                  )}
                   <div>
                     <p className="font-heading uppercase text-foreground text-sm">{t.name}</p>
                     <p className="text-primary text-xs font-bold uppercase">{t.label}</p>
