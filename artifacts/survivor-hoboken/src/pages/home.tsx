@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "wouter";
 import { usePageMeta } from "@/hooks/use-page-meta";
 
@@ -41,7 +42,7 @@ const TESTIMONIALS = [
     quote: "It felt like getting all the best parts of the show without having to sleep on the beach.",
     name: "Danielle",
     label: "Season 2",
-    photo: "",
+    photo: "/images/testimonial-danielle.webp",
     initial: "D",
   },
   {
@@ -49,7 +50,7 @@ const TESTIMONIALS = [
     quote: "I found a community of people who I look forward to continuing to get to know after the game. I can't express how grateful I am for the opportunity.",
     name: "Karah",
     label: "Season 2",
-    photo: "",
+    photo: "/images/testimonial-karah.webp",
     initial: "K",
   },
   {
@@ -57,18 +58,112 @@ const TESTIMONIALS = [
     quote: "Matt does such a great job making every little detail feel like the real Survivor! Added bonus that you get to walk away with new friends!",
     name: "Casey",
     label: "Season 3",
-    photo: "",
+    photo: "/images/testimonial-casey.webp",
     initial: "C",
   },
   {
     pull: "Matt does a phenomenal job hosting.",
     quote: "Tribal councils are so well done, and he truly brings the Survivor energy you are looking for.",
     name: "Tom",
-    label: "Player",
-    photo: "",
+    label: "Season 2",
+    photo: "/images/testimonial-tom.webp",
     initial: "T",
   },
 ];
+
+function TestimonialCarousel() {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const go = useCallback((next: number) => {
+    setDirection(next > index ? 1 : -1);
+    setIndex(next);
+  }, [index]);
+
+  const prev = () => go((index - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const next = () => go((index + 1) % TESTIMONIALS.length);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDirection(1);
+      setIndex((i) => (i + 1) % TESTIMONIALS.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const t = TESTIMONIALS[index];
+
+  return (
+    <section className="py-24 px-4 border-t border-border bg-foreground overflow-hidden">
+      <div className="container mx-auto max-w-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-heading uppercase text-center text-background mb-12"
+        >
+          From the players
+        </motion.h2>
+
+        <div className="relative">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={index}
+              custom={direction}
+              initial={{ x: direction * 80, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction * -80, opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="bg-background rounded-sm p-10 text-center"
+            >
+              <img
+                src={t.photo}
+                alt={t.name}
+                className="w-20 h-20 rounded-full object-cover border-4 border-primary mx-auto mb-6"
+              />
+              <p className="text-2xl md:text-3xl font-heading uppercase text-foreground mb-4 leading-tight">
+                {t.pull}
+              </p>
+              <p className="text-foreground/70 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                "{t.quote}"
+              </p>
+              <p className="font-heading uppercase text-foreground text-base">{t.name}</p>
+              <p className="text-primary text-sm font-bold uppercase tracking-wide">{t.label}</p>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Arrows */}
+          <button
+            onClick={prev}
+            aria-label="Previous testimonial"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:opacity-80 transition-opacity"
+          >
+            ‹
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next testimonial"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:opacity-80 transition-opacity"
+          >
+            ›
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {TESTIMONIALS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => go(i)}
+              aria-label={`Go to testimonial ${i + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === index ? "bg-primary scale-125" : "bg-background/40"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
   usePageMeta(
@@ -160,56 +255,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── 4. SOCIAL PROOF ──────────────────────────────────── */}
-      <section className="py-24 px-4 border-t border-border bg-background">
-        <div className="container mx-auto max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading uppercase text-center text-foreground mb-12"
-          >
-            From the players
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {TESTIMONIALS.map((t, i) => (
-              <motion.div
-                key={t.name + i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="bg-card border border-border p-8"
-              >
-                <p className="text-2xl font-heading uppercase text-foreground mb-4 leading-tight">
-                  {t.pull}
-                </p>
-                <p className="text-foreground/70 mb-6 leading-relaxed">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  {t.photo ? (
-                    <img
-                      src={t.photo}
-                      alt={t.name}
-                      className="w-10 h-10 rounded-full object-cover border-2 border-primary"
-                    />
-                  ) : (
-                    <div className="w-10 h-10 bg-primary text-white font-heading flex items-center justify-center rounded-full text-sm shrink-0">
-                      {t.initial}
-                    </div>
-                  )}
-                  <div>
-                    <p className="font-heading uppercase text-foreground text-sm">{t.name}</p>
-                    <p className="text-primary text-xs font-bold uppercase">{t.label}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ── 4. SOCIAL PROOF — CAROUSEL ───────────────────────── */}
+      <TestimonialCarousel />
 
       {/* ── 5. WHAT MAKES IT REAL ────────────────────────────── */}
       <section className="py-24 px-4 bg-background border-t border-border">
