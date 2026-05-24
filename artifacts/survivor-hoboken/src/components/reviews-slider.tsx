@@ -83,9 +83,11 @@ function ReviewCard({ review }: { review: (typeof REVIEWS)[0] }) {
   );
 }
 
-export function ReviewsSlider() {
+export type Review = (typeof REVIEWS)[0];
+
+export function ReviewsSlider({ reviews = REVIEWS }: { reviews?: Review[] } = {}) {
   const [cardsVisible, setCardsVisible] = useState(2);
-  const n = REVIEWS.length;
+  const n = reviews.length;
 
   useEffect(() => {
     const update = () => setCardsVisible(window.innerWidth < 768 ? 1 : 2);
@@ -97,9 +99,9 @@ export function ReviewsSlider() {
   const cardWidth = 100 / cardsVisible;
 
   const looped = [
-    ...Array.from({ length: PAD }, (_, i) => REVIEWS[(n - PAD + i + n) % n]),
-    ...REVIEWS,
-    ...Array.from({ length: PAD }, (_, i) => REVIEWS[i % n]),
+    ...Array.from({ length: PAD }, (_, i) => reviews[(n - PAD + i + n) % n]),
+    ...reviews,
+    ...Array.from({ length: PAD }, (_, i) => reviews[i % n]),
   ];
   const totalLen = looped.length;
 

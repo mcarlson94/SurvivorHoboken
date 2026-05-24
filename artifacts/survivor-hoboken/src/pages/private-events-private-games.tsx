@@ -3,7 +3,31 @@ import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { ChallengeSlider } from "@/components/challenge-slider";
-import { ReviewsSlider } from "@/components/reviews-slider";
+import { ReviewsSlider, type Review } from "@/components/reviews-slider";
+
+const GAME_REVIEWS: Review[] = [
+  {
+    name: "Tom",
+    label: "Season 2 Player",
+    pull: "\u201CMatt does a phenomenal job hosting.\u201D",
+    quote: "Tribal councils are so well done, and he truly brings the Survivor energy you are looking for.",
+    photo: "/images/testimonial-tom.webp",
+  },
+  {
+    name: "Danielle",
+    label: "Season 2 Player",
+    pull: "\u201C10 out of 10! I had an incredible time.\u201D",
+    quote: "It felt like getting all the best parts of the show without having to sleep on the beach.",
+    photo: "/images/testimonial-danielle.webp",
+  },
+  {
+    name: "Tyler",
+    label: "Manhattan Season 1 Player",
+    pull: "\u201CA lot of fun! I got to play Survivor!\u201D",
+    quote: "I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run — and it turned out to be an incredible experience.",
+    photo: null,
+  },
+];
 
 const faqs = [
   {
@@ -90,6 +114,9 @@ export default function PrivateGames() {
             <p>
               Whether it's a one-day showdown or spread across an entire weekend, we'll build the game around your group, your schedule, and your vibe.
             </p>
+            <p>
+              Based in the NYC/NJ area, we're willing to travel up and down the East Coast and out to the West Coast for the right group. If you're planning something special, reach out — we'll make it work.
+            </p>
           </div>
 
           <div className="flex justify-center mb-16">
@@ -159,7 +186,7 @@ export default function PrivateGames() {
             </a>
           </div>
 
-          <ReviewsSlider />
+          <ReviewsSlider reviews={GAME_REVIEWS} />
 
           <HubspotBooking />
 
