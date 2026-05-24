@@ -109,7 +109,7 @@ export default function FanEngagement() {
                   <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
                     As Seen At
                   </p>
-                  <div className="flex items-center gap-6 mb-6">
+                  <div className="inline-block bg-background border-4 border-primary p-4 mb-6">
                     <img
                       src="/images/client-logo-1.png"
                       alt="Somerset Patriots"
