@@ -42,6 +42,9 @@ const challenges = [
     alt: "Stacked Up",
     name: "Stacked Up",
     season: "As seen on Survivor 48",
+    description: "Patience and a steady rod. Castaways ferry balls and discs back and forth, racing to build a tower five balls high topped with a disc. One slip and the whole stack collapses — back to the start. Four can go head to head.",
+    blurb: "One slip and you start from zero.",
+    tags: ["HEAD-TO-HEAD", "4 STATIONS", "HIGH DIFFICULTY", "INDOOR OR OUTDOOR"],
   },
   {
     src: "/images/ch-team-immunity-stack.png",
