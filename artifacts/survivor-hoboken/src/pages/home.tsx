@@ -14,8 +14,8 @@ const PROOF_POINTS = [
 
 const TILES = [
   {
-    image: "/images/survivor-hoboken-snake-maze-challenge.webp",
-    alt: "Players competing in a custom Survivor snake maze challenge at a Survivor Hoboken event",
+    image: "/images/survivor-hoboken-a-bit-tipsy-balance-challenge.webp",
+    alt: "Players competing in the A Bit Tipsy balance challenge at a Survivor Hoboken event",
     title: "Real Challenges",
     body: "Custom-built immunity challenges from our actual seasons — balance, puzzles, endurance, and teamwork.",
     href: "/challenges",
