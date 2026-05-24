@@ -93,6 +93,14 @@ const TESTIMONIALS = [
     photo: "/images/testimonial-tyler.webp",
     initial: "T",
   },
+  {
+    pull: "An absolutely unforgettable experience.",
+    quote: "From the gameplay, to the twists, to the challenges, to the tribals — every moment left us feeling like we were immersed in the game of Survivor.",
+    name: "Jake",
+    label: "5/16/26 One-Day Game",
+    photo: "/images/testimonial-jake.webp",
+    initial: "J",
+  },
 ];
 
 function TestimonialCarousel() {
