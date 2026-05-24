@@ -247,20 +247,11 @@ export default function CorporateEvents() {
             <div className="space-y-6">
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">Group Size</h3>
-                <p className="text-foreground/80">Works best for teams of 8-20 participants. Have a larger group? We have two options:</p>
-                <ul className="mt-2 space-y-1 text-foreground/80">
-                  <li>• We can adapt the full Survivor experience for groups of 20-40 (contact us to discuss logistics)</li>
-                  <li>• For groups of 40+, we can bring our complete challenge library and create a challenge fair format where teams rotate through different Survivor challenges at their own pace</li>
-                </ul>
+                <p className="text-foreground/80">This format is designed for 15-30 people. We can customize the experience based on your team's needs, so reach out if your headcount falls outside that range.</p>
               </div>
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">Duration Options</h3>
-                <ul className="space-y-1 text-foreground/80">
-                  <li>• 2-Hour Express: Core experience, 3-4 challenges</li>
-                  <li>• 3-Hour Standard: Full experience, 5-6 challenges</li>
-                  <li>• 4-Hour Premium: Extended gameplay, 7-8 challenges</li>
-                  <li>• Full-Day Adventure: Multiple rounds, more complex strategy</li>
-                </ul>
+                <p className="text-foreground/80">Our standard experience runs around 4 hours. We're happy to work with you to customize the format to meet your time needs.</p>
               </div>
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">Starting Investment</h3>
@@ -269,17 +260,15 @@ export default function CorporateEvents() {
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">What's Included</h3>
                 <ul className="space-y-1 text-foreground/80">
-                  {[
-                    "Professional host/facilitator",
-                    "All challenges, props, and equipment",
-                    "Tribe buffs for all participants",
-                    "Hidden immunity idols",
-                    "Tribal council setup",
-                    "Setup and breakdown",
-                  ].map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
+                  <li>• Professional hosting and facilitation</li>
+                  <li>• Marquee Survivor-style challenges, props, and equipment</li>
+                  <li>• Tribe buffs for all participants</li>
+                  <li>• Setup and breakdown</li>
                 </ul>
+              </div>
+              <div>
+                <h3 className="font-heading text-lg uppercase mb-2 text-foreground/50">Not Included</h3>
+                <p className="text-foreground/80">Venue. You will need to identify a space and get permission to use it. We're happy to work with you to help find something that fits.</p>
               </div>
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">Available Add-Ons</h3>
