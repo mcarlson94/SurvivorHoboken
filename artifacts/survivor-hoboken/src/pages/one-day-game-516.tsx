@@ -73,7 +73,6 @@ export default function OneDayGame516() {
               <p>7th: Ed Waldron</p>
               <p>6th: Josh Taubenslag</p>
               <p>5th: Tory Jason</p>
-              <p className="font-bold uppercase text-foreground mt-3">FINAL 4</p>
               <p>4th: Jona Rajan</p>
               <p className="font-bold uppercase text-foreground mt-3">FINAL 3</p>
               <p>3rd: Garret Thomas</p>
