@@ -93,7 +93,7 @@ function BookingSection() {
             Book Survivor Hoboken
           </h2>
           <p className="text-background/70 text-lg md:text-xl mb-10 max-w-xl mx-auto">
-            Bring these challenges to your next event. We'll handle everything, challenges, hosting, and tribal council.
+            Bring these challenges to your next event. We'll handle everything: challenges, hosting, and tribal council.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <a
