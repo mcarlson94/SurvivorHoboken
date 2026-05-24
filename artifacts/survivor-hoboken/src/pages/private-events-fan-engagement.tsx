@@ -199,16 +199,16 @@ export default function FanEngagement() {
             </div>
           </div>
 
-          {/* What makes it stand out */}
+          {/* What it looks like */}
           <div className="mb-20 bg-card border-4 border-foreground p-8 md:p-12 brutal-shadow relative">
             <div className="absolute -top-6 right-8 bg-primary text-white font-heading text-2xl px-6 py-2 brutal-shadow transform rotate-2">
-              WHY IT WORKS
+              WHAT IT LOOKS LIKE
             </div>
             <ul className="space-y-6 mt-8">
               {[
-                "Real Survivor-style challenges fans recognize from TV",
-                "High energy — designed to draw a crowd",
-                "Head-to-head format keeps spectators engaged",
+                "We set up multiple stations with our marquee challenges that people can compete on",
+                "Our staff keeps things moving and brings the Survivor energy!",
+                "Fun for all ages",
                 "Fully portable — sets up anywhere in minutes",
                 "Custom branding and sponsor integration available",
                 "Professional Game Master facilitation by Matt Carlson",
