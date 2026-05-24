@@ -23,91 +23,112 @@ export function Footer() {
 
   return (
     <>
-    <footer className="bg-secondary text-secondary-foreground py-16 border-t-4 border-foreground mt-24">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2">
-            <Link href="/">
-              <img
-                src="/images/logo.png"
-                alt="Survivor Hoboken"
-                className="h-20 w-auto mb-4"
-              />
-            </Link>
-            <p className="text-secondary-foreground/80 max-w-md font-medium text-lg leading-relaxed">
-              Survivor Hoboken designs and produces unforgettable Survivor-style experiences. We bring the game people love to life with real challenges, real competition, and real stakes for communities, companies, and celebrations alike.
-            </p>
+      <footer className="bg-secondary text-secondary-foreground border-t-4 border-foreground mt-24">
+        <div className="bg-primary py-10 px-4">
+          <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="font-heading text-2xl md:text-3xl uppercase text-white leading-tight">
+                Ready to Plan Your Event?
+              </p>
+              <p className="text-white/80 font-medium mt-1">
+                Book a free 15-min call and let&apos;s make it happen.
+              </p>
+            </div>
+            <button
+              onClick={() => setBookingOpen(true)}
+              className="shrink-0 bg-white text-primary font-heading text-lg uppercase px-8 py-4 border-4 border-white hover:bg-transparent hover:text-white transition-colors"
+            >
+              Book a 15-Min Call
+            </button>
           </div>
+        </div>
 
-          <div>
-            <h3 className="font-heading text-xl mb-4">Quick Links</h3>
-            <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/challenges" className="hover:text-primary transition-colors">Challenges</Link></li>
-              <li><Link href="/rule-book" className="hover:text-primary transition-colors">Rule Book</Link></li>
-              <li><Link href="/season-recaps" className="hover:text-primary transition-colors">Season Recaps</Link></li>
-            </ul>
-          </div>
+        <div className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+              <div className="md:col-span-2">
+                <Link href="/">
+                  <img
+                    src="/images/logo.png"
+                    alt="Survivor Hoboken"
+                    className="h-20 w-auto mb-4"
+                  />
+                </Link>
+                <p className="text-secondary-foreground/80 max-w-md font-medium text-lg leading-relaxed">
+                  Survivor Hoboken designs and produces unforgettable Survivor-style experiences. We bring the game people love to life with real challenges, real competition, and real stakes for communities, companies, and celebrations alike.
+                </p>
+              </div>
 
-          <div>
-            <h3 className="font-heading text-xl mb-4">Connect</h3>
-            <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
-              <li><Link href="/private-events" className="hover:text-primary transition-colors">Private Events</Link></li>
-              <li>
-                <button
-                  onClick={() => setBookingOpen(true)}
-                  className="hover:text-primary transition-colors uppercase tracking-wider text-sm font-bold"
-                >
-                  Book a 15-Min Call
-                </button>
-              </li>
-              <li>
-                <a href="mailto:Tribal@survivorhoboken.com" className="hover:text-primary transition-colors">
-                  Tribal@survivorhoboken.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:2016582062" className="hover:text-primary transition-colors">
-                  201-658-2062
-                </a>
-              </li>
-            </ul>
+              <div>
+                <h3 className="font-heading text-xl mb-4">Quick Links</h3>
+                <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
+                  <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                  <li><Link href="/challenges" className="hover:text-primary transition-colors">Challenges</Link></li>
+                  <li><Link href="/rule-book" className="hover:text-primary transition-colors">Rule Book</Link></li>
+                  <li><Link href="/season-recaps" className="hover:text-primary transition-colors">Season Recaps</Link></li>
+                </ul>
+              </div>
 
-            <div className="flex gap-4 mt-6">
-              <a
-                href="https://www.instagram.com/survivorhoboken/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Survivor Hoboken on Instagram"
-                className="hover:text-primary transition-colors"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://www.tiktok.com/@survivorhoboken"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Survivor Hoboken on TikTok"
-                className="hover:text-primary transition-colors"
-              >
-                <TikTokIcon />
-              </a>
+              <div>
+                <h3 className="font-heading text-xl mb-4">Connect</h3>
+                <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
+                  <li><Link href="/private-events" className="hover:text-primary transition-colors">Private Events</Link></li>
+                  <li>
+                    <button
+                      onClick={() => setBookingOpen(true)}
+                      className="hover:text-primary transition-colors uppercase tracking-wider text-sm font-bold"
+                    >
+                      Book a 15-Min Call
+                    </button>
+                  </li>
+                  <li>
+                    <a href="mailto:Tribal@survivorhoboken.com" className="hover:text-primary transition-colors">
+                      Tribal@survivorhoboken.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:2016582062" className="hover:text-primary transition-colors">
+                      201-658-2062
+                    </a>
+                  </li>
+                </ul>
+
+                <div className="flex gap-4 mt-6">
+                  <a
+                    href="https://www.instagram.com/survivorhoboken/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Survivor Hoboken on Instagram"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <InstagramIcon />
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@survivorhoboken"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Survivor Hoboken on TikTok"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <TikTokIcon />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-16 pt-8 border-t border-secondary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-secondary-foreground/60 font-medium text-sm">
+                &copy; {new Date().getFullYear()} Survivor Hoboken. All rights reserved.
+              </p>
+              <p className="text-secondary-foreground/60 font-medium text-sm text-center md:text-right">
+                Not affiliated with CBS or Survivor TV Show.
+              </p>
             </div>
           </div>
         </div>
+      </footer>
 
-        <div className="mt-16 pt-8 border-t border-secondary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-secondary-foreground/60 font-medium text-sm">
-            © {new Date().getFullYear()} Survivor Hoboken. All rights reserved.
-          </p>
-          <p className="text-secondary-foreground/60 font-medium text-sm text-center md:text-right">
-            Not affiliated with CBS or Survivor TV Show.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
+      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </>
   );
 }
