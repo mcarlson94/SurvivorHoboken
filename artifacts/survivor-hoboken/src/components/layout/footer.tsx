@@ -30,7 +30,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-secondary-foreground/80 max-w-md font-medium text-lg leading-relaxed">
-              A live reality competition packed with daily challenges, tribal councils, and nonstop strategy — all leading to one local being crowned the Sole Survivor of Hoboken.
+              Survivor Hoboken designs and produces unforgettable Survivor-style experiences. We bring the game people love to life with real challenges, real competition, and real stakes for communities, companies, and celebrations alike.
             </p>
           </div>
 
