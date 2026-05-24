@@ -36,6 +36,9 @@ const challenges = [
     alt: "Team Immunity Stack",
     name: "Team Immunity Stack",
     season: "As seen on Survivor 36",
+    description: "Five tribemates grip a single rope to hoist a platform off the ground, then take turns placing blocks to spell IMMUNITY. One wobble too many and the whole tower comes down — start over. First tribe to spell it and hold steady claims the win. Can your tribe keep it together?",
+    blurb: "Five players, one rope, zero room for error.",
+    tags: ["5 PER TRIBE", "~20 MIN", "BEST OUTDOORS", "NEEDS 40 FT"],
   },
   {
     src: "/images/ch-survivor-puzzles.png",
@@ -91,6 +94,28 @@ export default function Challenges() {
                     <div className="inline-block border border-primary/50 text-primary/80 text-xs uppercase tracking-widest px-3 py-1 rounded-full">
                       {item.season}
                     </div>
+                    {"blurb" in item && (
+                      <p className="text-base font-semibold text-foreground/90 italic">
+                        {item.blurb}
+                      </p>
+                    )}
+                    {"description" in item && (
+                      <p className="text-base text-foreground/60 leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
+                    {"tags" in item && Array.isArray(item.tags) && (
+                      <div className="flex flex-wrap gap-2 pt-1">
+                        {item.tags.map((tag: string) => (
+                          <span
+                            key={tag}
+                            className="border border-foreground/20 text-foreground/50 text-xs uppercase tracking-widest px-3 py-1 rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               );
