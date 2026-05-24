@@ -10,8 +10,11 @@ const challenges = [
   {
     src: "/images/ch-a-bit-tipsy.png",
     alt: "A Bit Tipsy",
-    name: "A Bit Tipsy",
+    name: "A Bit Tipsy (Individual)",
     season: "As seen on Survivor 50",
+    description: "Balance is everything. Players steady a wobbling board while stacking tiles one at a time to spell IMMUNITY — lose your nerve and it all topples. It's one of our toughest; runs can stretch past twenty minutes. Five castaways can battle at once.",
+    blurb: "One wrong move and it all comes down.",
+    tags: ["SOLO", "4 STATIONS", "20+ MIN", "HIGH DIFFICULTY"],
   },
   {
     src: "/images/ch-table-maze.png",
