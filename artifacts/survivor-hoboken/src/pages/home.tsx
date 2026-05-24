@@ -328,7 +328,7 @@ export default function Home() {
                 key={n}
                 src={`/images/client-logo-${n}.png`}
                 alt={`Client logo ${n}`}
-                className="h-10 md:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                className="h-16 md:h-20 w-auto object-contain"
               />
             ))}
           </div>
