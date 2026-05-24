@@ -25,7 +25,7 @@ const TILES = [
     alt: "Survivor Hoboken host reading votes Jeff Probst-style at a live tribal council",
     title: "Jeff Probst-Style Hosting",
     body: "Professionally hosted, Jeff-Probst-style, with tribal councils and real stakes.",
-    href: "/private-events",
+    href: "/about",
   },
   {
     image: "/images/survivor-hoboken-group-park.webp",
