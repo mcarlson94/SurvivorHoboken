@@ -316,31 +316,20 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ── TICKER ───────────────────────────────────────────── */}
-      <div className="bg-foreground py-5 overflow-hidden">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ repeat: Infinity, ease: "linear", duration: 22 }}
-          className="flex whitespace-nowrap items-center gap-16 font-heading text-xl tracking-wider text-background"
-        >
-          {[...Array(4)].map((_, i) => (
-            <span key={i} className="flex items-center gap-16">
-              <span className="italic font-bold text-primary">DO YOU HAVE WHAT IT TAKES?</span>
-              <span>HOBOKEN NJ</span>
-              <span>SurvivorHoboken.com</span>
-            </span>
-          ))}
-        </motion.div>
-      </div>
-
-      {/* ── 3. PROOF BAR ─────────────────────────────────────── */}
-      <div className="border-t border-b border-border py-6 px-4 bg-background">
+      {/* ── SOCIAL PROOF — LOGOS ─────────────────────────────── */}
+      <div className="bg-[#f5f3ef] border-t border-b border-border py-12 px-4">
         <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            {PROOF_POINTS.map((point) => (
-              <p key={point} className="text-xs md:text-sm font-bold uppercase tracking-widest text-foreground/60">
-                {point}
-              </p>
+          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-foreground/40 mb-10">
+            Trusted by teams, brands &amp; celebrations across the NYC &amp; NJ metro area
+          </p>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center">
+            {[1, 2, 3, 4, 5, 6].map((n) => (
+              <img
+                key={n}
+                src={`/images/client-logo-${n}.png`}
+                alt={`Client logo ${n}`}
+                className="h-10 md:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+              />
             ))}
           </div>
         </div>
