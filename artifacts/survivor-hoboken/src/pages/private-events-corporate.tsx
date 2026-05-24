@@ -13,7 +13,7 @@ const testimonials = [
     season: "Hoboken SZN 2",
   },
   {
-    quote: "A lot of fun! I got to play Survivor! I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run — and it turned out to be an incredible experience.",
+    quote: "A lot of fun! I got to play Survivor! I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run, and it turned out to be an incredible experience.",
     name: "Tyler",
     season: "Manhattan SZN 1",
   },
@@ -48,13 +48,13 @@ const faqs = [
 ];
 
 const perfectFor = [
-  "Sales Kickoffs – Start the quarter with high energy and team alignment",
-  "Department Offsites – Break down silos between teams",
-  "New Team Integration – Help new hires or merged teams bond",
-  "Annual Company Retreats – Make it the highlight of your gathering",
-  "Leadership Development – See who steps up under pressure",
-  "Summer Outings – Beat the typical picnic or happy hour",
-  "End-of-Year Celebrations – Reward your team with something epic",
+  "Sales Kickoffs: Start the quarter with high energy and team alignment",
+  "Department Offsites: Break down silos between teams",
+  "New Team Integration: Help new hires or merged teams bond",
+  "Annual Company Retreats: Make it the highlight of your gathering",
+  "Leadership Development: See who steps up under pressure",
+  "Summer Outings: Beat the typical picnic or happy hour",
+  "End-of-Year Celebrations: Reward your team with something epic",
 ];
 
 export default function CorporateEvents() {
@@ -83,7 +83,7 @@ export default function CorporateEvents() {
             transition={{ delay: 0.1 }}
             className="text-xl md:text-2xl font-medium leading-relaxed max-w-2xl text-background/90 mb-8"
           >
-            Build stronger teams through competition, strategy, and real challenges—just like the hit TV show.
+            Build stronger teams through competition, strategy, and real challenges, just like the hit TV show.
           </motion.p>
           <motion.a
             href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
@@ -128,15 +128,15 @@ export default function CorporateEvents() {
 
           <h2 className="text-3xl md:text-4xl font-heading uppercase mb-6">What Is Survivor-Style Team Building?</h2>
           <div className="space-y-4 text-lg font-medium text-foreground/90 max-w-3xl mb-4">
-            <p>Imagine your team competing in the same challenges you've watched on TV—strategy games, physical competitions, puzzle-solving, and high-stakes tribal councils.</p>
+            <p>Imagine your team competing in the same challenges you've watched on TV: strategy games, physical competitions, puzzle-solving, and high-stakes tribal councils.</p>
             <p>We divide your group into tribes, each wearing colored buffs. Over 2-4 hours, they'll compete in a series of carefully designed challenges that require:</p>
           </div>
           <ul className="space-y-3 mb-6 max-w-3xl">
             {[
-              "Clear communication – Coordinating under time pressure",
-              "Physical teamwork – Working together to complete tasks",
-              "Creative problem-solving – Thinking outside the box",
-              "Trust building – Relying on teammates' strengths",
+              "Clear communication: Coordinating under time pressure",
+              "Physical teamwork: Working together to complete tasks",
+              "Creative problem-solving: Thinking outside the box",
+              "Trust building: Relying on teammates' strengths",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-lg font-medium">
                 <div className="w-4 h-4 bg-primary shrink-0 mt-1" />
@@ -150,7 +150,10 @@ export default function CorporateEvents() {
 
           <ChallengeSlider />
 
-          <h2 className="text-3xl md:text-4xl font-heading uppercase mb-4">Our Signature Corporate Format</h2>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading uppercase">Our Signature Corporate Format</h2>
+            <span className="text-foreground/50 font-bold text-sm uppercase tracking-wide">Roughly ~4 hours</span>
+          </div>
           <p className="text-lg font-medium text-foreground/80 max-w-3xl mb-10">
             This is our proven structure for corporate groups. Three phases, one scoring system, and a finale your team will talk about for years.
           </p>
@@ -193,7 +196,7 @@ export default function CorporateEvents() {
           <div className="bg-foreground text-background p-6 border-l-4 border-primary mb-16">
             <p className="font-heading text-lg uppercase mb-1">Fire Tokens</p>
             <p className="text-background/75 leading-relaxed">
-              Fire tokens are the scoring currency that runs through all three phases. Earn them in tribal challenges, earn them at individual stations, and carry them into the finale. The player who accumulates the most has the best shot at advancing — but the finale is where it all gets decided.
+              Fire tokens are the scoring currency that runs through all three phases. Earn them in tribal challenges, earn them at individual stations, and carry them into the finale. The player who accumulates the most has the best shot at advancing, but the finale is where it all gets decided.
             </p>
           </div>
 
@@ -214,7 +217,7 @@ export default function CorporateEvents() {
                 },
                 {
                   label: "Finale Style",
-                  body: "Challenge-only gauntlet with no vote-outs, or a full Tribal Council with live votes and a Sole Survivor. Your call — we run both at the same level.",
+                  body: "Challenge-only gauntlet with no vote-outs, or a full Tribal Council with live votes and a Sole Survivor. Your call: we run both at the same level.",
                 },
                 {
                   label: "Custom Elements",
@@ -253,10 +256,10 @@ export default function CorporateEvents() {
               <div>
                 <h3 className="font-heading text-lg uppercase mb-2">Duration Options</h3>
                 <ul className="space-y-1 text-foreground/80">
-                  <li>• 2-Hour Express – Core experience, 3-4 challenges</li>
-                  <li>• 3-Hour Standard – Full experience, 5-6 challenges</li>
-                  <li>• 4-Hour Premium – Extended gameplay, 7-8 challenges</li>
-                  <li>• Full-Day Adventure – Multiple rounds, more complex strategy</li>
+                  <li>• 2-Hour Express: Core experience, 3-4 challenges</li>
+                  <li>• 3-Hour Standard: Full experience, 5-6 challenges</li>
+                  <li>• 4-Hour Premium: Extended gameplay, 7-8 challenges</li>
+                  <li>• Full-Day Adventure: Multiple rounds, more complex strategy</li>
                 </ul>
               </div>
               <div>
