@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { HubspotBooking } from "@/components/hubspot-booking";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { ChallengeSlider } from "@/components/challenge-slider";
-import { ReviewsSlider } from "@/components/reviews-slider";
 import { useEffect } from "react";
 
 function InstagramEmbed({ url }: { url: string }) {
@@ -46,6 +44,15 @@ function InstagramEmbed({ url }: { url: string }) {
 }
 
 export default function FanEngagement() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
   usePageMeta({
     title: "Live Survivor Challenges for Survivor Night Events | Fan Engagement | Survivor Hoboken",
     description:
@@ -245,15 +252,32 @@ export default function FanEngagement() {
               href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading text-xl px-10 py-5 border-4 border-white brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase"
+              className="inline-block bg-primary text-white font-heading text-xl px-10 py-5 border-4 border-white brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase mb-10"
             >
               Schedule 15-min Call
             </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+              <a
+                href="mailto:Tribal@survivorhoboken.com"
+                className="text-xl md:text-2xl font-heading uppercase text-white hover:text-primary transition-colors tracking-wide"
+              >
+                Tribal@survivorhoboken.com
+              </a>
+              <span className="hidden sm:block text-white/30 text-2xl">|</span>
+              <a
+                href="tel:2016582062"
+                className="text-xl md:text-2xl font-heading uppercase text-white hover:text-primary transition-colors tracking-wide"
+              >
+                201-658-2062
+              </a>
+            </div>
+            <div
+              className="meetings-iframe-container"
+              data-src="https://meetings-na2.hubspot.com/matthew-carlson/private-events-?embed=true"
+            />
           </div>
         </div>
       </section>
-
-      <HubspotBooking />
     </div>
   );
 }
