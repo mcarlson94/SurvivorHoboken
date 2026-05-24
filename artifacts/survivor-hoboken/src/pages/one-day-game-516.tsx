@@ -61,32 +61,33 @@ export default function OneDayGame516() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="pt-4">
             <h4 className="text-2xl font-heading uppercase text-foreground mb-4">Final Standings</h4>
             <div className="space-y-1 text-base">
-              <p>15th: Ashley</p>
-              <p>14th: Natasha</p>
-              <p>13th: Roshan</p>
-              <p>12th: Maddy</p>
-              <p>11th: Erik</p>
+              <p>15th: Ashley Flood</p>
+              <p>14th: Natasha Williams</p>
+              <p>13th: Roshan Jobanputra</p>
+              <p>12th: Maddy Kirchofer</p>
+              <p>11th: Erik Melao</p>
               <p className="font-bold uppercase text-foreground mt-3">JURY</p>
-              <p>10th: Scott</p>
-              <p>9th: Gianna</p>
-              <p>8th: Kayla</p>
-              <p>7th: Ed</p>
-              <p>6th: Josh</p>
-              <p>5th: Tory</p>
+              <p>10th: Scott Schumann</p>
+              <p>9th: Gianna Carrozza</p>
+              <p>8th: Kayla Olivo</p>
+              <p>7th: Ed Waldron</p>
+              <p>6th: Josh Taubenslag</p>
+              <p>5th: Tory Jason</p>
               <p className="font-bold uppercase text-foreground mt-3">FINAL 4</p>
-              <p>4th: Jona</p>
+              <p>4th: Jona Rajan</p>
               <p className="font-bold uppercase text-foreground mt-3">FINAL 3</p>
-              <p>3rd: Garret</p>
-              <p>2nd: Jake</p>
-              <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: Jacqui</p>
+              <p>3rd: Garret Thomas</p>
+              <p>2nd: Jake Parish</p>
+              <p className="font-bold text-primary uppercase text-lg mt-2">SOLE SURVIVOR: Jacqui Cook</p>
             </div>
             <div className="mt-6">
               <img
                 src="/images/survivor-hoboken-winner-jacqui-may-2025.webp"
-                alt="Jacqui — Sole Survivor of the Survivor Hoboken One Day Game, May 16 2026"
+                alt="Jacqui Cook — Sole Survivor of the Survivor Hoboken One Day Game, May 16 2026"
                 className="rounded w-full max-w-sm"
                 loading="lazy"
               />
+              <p className="text-sm font-bold uppercase tracking-wider text-foreground/60 mt-2">Jacqui Cook — Sole Survivor</p>
             </div>
           </motion.div>
 
