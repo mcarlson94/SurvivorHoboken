@@ -11,7 +11,7 @@ const challenges = [
     src: "/images/ch-a-bit-tipsy.png",
     alt: "A Bit Tipsy",
     name: "A Bit Tipsy",
-    season: "As seen on Survivor",
+    season: "As seen on Survivor 50",
   },
   {
     src: "/images/ch-table-maze.png",
@@ -35,7 +35,7 @@ const challenges = [
     src: "/images/ch-team-immunity-stack.png",
     alt: "Team Immunity Stack",
     name: "Team Immunity Stack",
-    season: "As seen on Survivor",
+    season: "As seen on Survivor 36",
   },
   {
     src: "/images/ch-survivor-puzzles.png",
