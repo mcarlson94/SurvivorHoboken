@@ -79,6 +79,11 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="relative z-10 px-4 max-w-4xl mx-auto"
         >
+          <img
+            src="/images/logo.png"
+            alt="Survivor Hoboken"
+            className="h-28 md:h-36 w-auto mx-auto mb-8"
+          />
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading uppercase text-white leading-[0.92] mb-6">
             The real Survivor experience, brought to life.
           </h1>
