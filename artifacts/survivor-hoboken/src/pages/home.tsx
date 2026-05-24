@@ -88,7 +88,7 @@ export default function Home() {
             The real Survivor experience, brought to life.
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Live competition built on real challenges, real strategy, and real stakes — for our hometown seasons and for your team, your party, or your celebration.
+            Real challenges, real competition, and real stakes for communities, companies, and celebrations alike.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -96,7 +96,7 @@ export default function Home() {
               href="/private-events"
               className="bg-primary text-white font-heading uppercase px-8 py-4 text-base rounded hover:opacity-90 transition-opacity text-center"
             >
-              Bring Survivor to your event
+              Private Events
             </Link>
             <a
               href={APPLY_LINK}
@@ -104,7 +104,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="bg-primary text-white font-heading uppercase px-8 py-4 text-base rounded hover:opacity-90 transition-opacity text-center"
             >
-              Play in a season
+              Apply To Play (Rolling Application)
             </a>
           </div>
 
@@ -130,67 +130,6 @@ export default function Home() {
           ))}
         </motion.div>
       </div>
-
-      {/* ── 2. CHOOSE YOUR PATH ──────────────────────────────── */}
-      <section className="py-24 px-4 bg-background">
-        <div className="container mx-auto max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading uppercase text-center text-foreground mb-12"
-          >
-            Choose your path
-          </motion.h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Card A — Hire */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-foreground text-background p-10 flex flex-col gap-6"
-            >
-              <div>
-                <h3 className="font-heading text-3xl uppercase mb-4 leading-tight">Hire Survivor Hoboken</h3>
-                <p className="text-background/75 leading-relaxed">
-                  Custom Survivor experiences for corporate events, birthdays, bachelor &amp; bachelorette parties, weddings, and multi-day getaways. We bring the challenges, the host, and the production.
-                </p>
-              </div>
-              <Link
-                href="/private-events"
-                className="mt-auto inline-block bg-primary text-white font-heading uppercase px-6 py-3 text-sm rounded hover:opacity-90 transition-opacity text-center"
-              >
-                Explore private events
-              </Link>
-            </motion.div>
-
-            {/* Card B — Play */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-primary text-white p-10 flex flex-col gap-6"
-            >
-              <div>
-                <h3 className="font-heading text-3xl uppercase mb-4 leading-tight">Play in Survivor Hoboken</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Our live, multi-season game played across Hoboken. Compete in real challenges, outlast your tribe, and join an alumni community five seasons strong.
-                </p>
-              </div>
-              <a
-                href={APPLY_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block bg-white text-primary font-heading uppercase px-6 py-3 text-sm rounded hover:opacity-90 transition-opacity text-center"
-              >
-                Apply to play
-              </a>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* ── 3. PROOF BAR ─────────────────────────────────────── */}
       <div className="border-t border-b border-border py-6 px-4 bg-background">
