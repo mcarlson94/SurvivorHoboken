@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
 import { usePageMeta } from "@/hooks/use-page-meta";
+import { PrivateEventVideo } from "@/components/private-event-video";
+import { ChallengeSlider } from "@/components/challenge-slider";
 
 const testimonials = [
   {
@@ -94,6 +96,8 @@ export default function BirthdayParties() {
         </div>
       </div>
 
+      <PrivateEventVideo />
+
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-6 text-lg font-medium text-foreground/90 max-w-3xl mb-12">
@@ -138,6 +142,8 @@ export default function BirthdayParties() {
             </ul>
             <p className="font-bold">This isn't just another event. It's Survivor 🌴🔥</p>
           </div>
+
+          <ChallengeSlider />
 
           <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">How Your Survivor Birthday Party Works</h2>
           <div className="space-y-10 mb-16">
