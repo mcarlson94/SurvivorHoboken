@@ -207,18 +207,6 @@ export default function BachelorParties() {
             ))}
           </div>
 
-          <div className="bg-foreground text-background p-8 md:p-12 border-4 border-foreground brutal-shadow mb-16">
-            <h2 className="font-heading text-3xl uppercase mb-2">The Tribe Has Spoken — Plan Your Pre-Wedding Survivor Event</h2>
-            <p className="text-background/70 mb-6">Email: <strong className="text-background">Tribal@survivorhoboken.com</strong> &nbsp;|&nbsp; Call/Text: <strong className="text-background">201-658-2062</strong></p>
-            <a
-              href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading text-xl px-8 py-4 border-4 border-white brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase"
-            >
-              Schedule 15-min Call
-            </a>
-          </div>
 
           <HubspotBooking />
 
