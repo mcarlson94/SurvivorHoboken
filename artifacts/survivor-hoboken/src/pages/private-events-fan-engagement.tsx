@@ -106,16 +106,19 @@ export default function FanEngagement() {
             <div className="bg-foreground text-background border-4 border-foreground brutal-shadow p-8 md:p-12 mb-6">
               <div className="flex flex-col md:flex-row md:items-center gap-8">
                 <div className="flex-1">
-                  <p className="text-primary font-heading text-sm uppercase tracking-widest mb-3">
+                  <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
                     As Seen At
                   </p>
-                  <div className="flex items-center gap-6 mb-4">
+                  <div className="flex items-center gap-6 mb-6">
                     <img
                       src="/images/client-logo-1.png"
                       alt="Somerset Patriots"
-                      className="h-16 w-auto object-contain brightness-0 invert"
+                      className="h-28 w-auto object-contain"
                     />
                   </div>
+                  <h3 className="text-2xl font-heading uppercase text-background mb-4">
+                    Somerset Patriots Survivor 50 Night
+                  </h3>
                   <p className="text-background/80 text-lg leading-relaxed">
                     We brought live Survivor challenges to the concourse at a Somerset Patriots game, giving fans a real immunity challenge experience between innings. The crowd loved it — real competition, real energy, right on the concourse.
                   </p>
