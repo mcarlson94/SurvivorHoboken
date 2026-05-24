@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePageMeta } from "@/hooks/use-page-meta";
-import { HubspotBooking } from "@/components/hubspot-booking";
 
 const challenges = [
   {
@@ -67,6 +67,58 @@ const challenges = [
     tags: ["TEAM RACES", "2–4 PER TEAM", "5–15 MIN", "MIX & MATCH"],
   },
 ];
+
+function BookingSection() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { document.body.removeChild(script); };
+  }, []);
+
+  return (
+    <section className="py-24 px-4 bg-foreground text-center">
+      <div className="container mx-auto max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
+            Ready to compete?
+          </p>
+          <h2 className="text-4xl md:text-6xl font-heading uppercase text-background leading-tight mb-6">
+            Book Survivor Hoboken
+          </h2>
+          <p className="text-background/70 text-lg md:text-xl mb-10 max-w-xl mx-auto">
+            Bring these challenges to your next event. We'll handle everything, challenges, hosting, and tribal council.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+            <a
+              href="mailto:Tribal@survivorhoboken.com"
+              className="text-xl md:text-2xl font-heading uppercase text-background hover:text-primary transition-colors tracking-wide"
+            >
+              Tribal@survivorhoboken.com
+            </a>
+            <span className="hidden sm:block text-background/30 text-2xl">|</span>
+            <a
+              href="tel:2016582062"
+              className="text-xl md:text-2xl font-heading uppercase text-background hover:text-primary transition-colors tracking-wide"
+            >
+              201-658-2062
+            </a>
+          </div>
+          <div
+            className="meetings-iframe-container"
+            data-src="https://meetings-na2.hubspot.com/matthew-carlson/private-events-?embed=true"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+}
 
 export default function Challenges() {
   usePageMeta(
@@ -157,35 +209,7 @@ export default function Challenges() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 bg-foreground text-center">
-        <div className="container mx-auto max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
-              Ready to compete?
-            </p>
-            <h2 className="text-4xl md:text-6xl font-heading uppercase text-background leading-tight mb-6">
-              Book Survivor Hoboken
-            </h2>
-            <p className="text-background/70 text-lg md:text-xl mb-10 max-w-xl mx-auto">
-              Bring these challenges to your next event. We'll handle everything — challenges, hosting, and tribal council.
-            </p>
-            <a
-              href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-heading uppercase tracking-widest px-10 py-4 text-base hover:opacity-90 transition-opacity"
-            >
-              Book a Meeting
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      <HubspotBooking />
+      <BookingSection />
     </div>
   );
 }
