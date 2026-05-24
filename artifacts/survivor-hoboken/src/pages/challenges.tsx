@@ -60,6 +60,9 @@ const challenges = [
     alt: "Survivor Style Puzzles",
     name: "Survivor Style Puzzles",
     season: "As seen on Survivor",
+    description: "Our custom puzzle arsenal, built for team races: tower puzzles, flame puzzles, seahorse puzzles, and Survivor Hoboken slide puzzles. We mix and match for rounds that run from a five-minute sprint to a fifteen-minute team brain-burner. Outthink the other tribe.",
+    blurb: "Outthink the other tribe.",
+    tags: ["TEAM RACES", "2–4 PER TEAM", "5–15 MIN", "MIX & MATCH"],
   },
 ];
 
