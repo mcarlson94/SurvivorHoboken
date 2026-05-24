@@ -151,7 +151,7 @@ function TestimonialCarousel() {
           <div className="overflow-hidden">
             <motion.div
               className="flex"
-              animate={{ x: `-${offset * cardWidth}%` }}
+              animate={{ x: `-${offset * (100 / looped.length)}%` }}
               transition={{ duration: 0.45, ease: "easeInOut" }}
               style={{ width: `${looped.length * cardWidth}%` }}
             >
