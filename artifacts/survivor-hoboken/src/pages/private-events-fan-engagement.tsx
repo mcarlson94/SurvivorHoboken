@@ -208,10 +208,9 @@ export default function FanEngagement() {
               {[
                 "We set up multiple stations with our marquee challenges that people can compete on",
                 "Our staff keeps things moving and brings the Survivor energy!",
-                "Fun for all ages",
-                "Fully portable — sets up anywhere in minutes",
+                "Fun for all ages — kids, families, and adults all get in on the action",
+                "Fully portable — sets up in 30–60 minutes anywhere",
                 "Custom branding and sponsor integration available",
-                "Professional Game Master facilitation by Matt Carlson",
               ].map((feature, i) => (
                 <li key={i} className="flex items-center gap-4 text-lg md:text-xl font-bold">
                   <div className="w-4 h-4 bg-primary shrink-0" />
