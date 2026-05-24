@@ -201,30 +201,16 @@ function TestimonialCarousel() {
           </button>
         </div>
 
-        {/* Dots */}
-        <div className="flex justify-center gap-2 mt-10">
-          {TESTIMONIALS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              aria-label={`Go to testimonial ${i + 1}`}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === index ? "bg-primary scale-125" : "bg-background/40"}`}
-            />
-          ))}
-        </div>
       </div>
 
-      {/* Sticky Apply CTA */}
+      {/* Apply CTA */}
       <div className="sticky bottom-0 z-20 bg-foreground border-t border-background/20 py-4 px-4">
-        <div className="container mx-auto max-w-6xl flex items-center justify-between gap-4">
-          <p className="text-background font-heading uppercase text-sm tracking-wide hidden sm:block">
-            Ready to play? Applications are rolling.
-          </p>
+        <div className="container mx-auto max-w-6xl flex justify-center">
           <a
             href={APPLY_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto inline-block bg-primary text-white font-heading uppercase tracking-widest text-sm px-8 py-3 hover:opacity-90 transition-opacity"
+            className="inline-block bg-primary text-white font-heading uppercase tracking-widest text-sm px-10 py-3 hover:opacity-90 transition-opacity"
           >
             Apply To Play
           </a>
