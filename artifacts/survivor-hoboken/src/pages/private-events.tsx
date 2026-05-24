@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
 import { ChallengeSlider } from "@/components/challenge-slider";
+import { ReviewsSlider } from "@/components/reviews-slider";
 
 const eventTypes = [
   {
@@ -133,6 +134,8 @@ export default function PrivateEvents() {
           </div>
 
           <ChallengeSlider />
+
+          <ReviewsSlider />
         </div>
       </section>
 
