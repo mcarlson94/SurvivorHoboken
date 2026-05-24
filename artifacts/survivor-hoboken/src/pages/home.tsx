@@ -144,49 +144,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── 4. WHAT MAKES IT REAL ────────────────────────────── */}
-      <section className="py-24 px-4 bg-background border-t border-border">
-        <div className="container mx-auto max-w-5xl">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-heading uppercase text-center text-foreground mb-12"
-          >
-            What makes it real
-          </motion.h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {TILES.map((tile, i) => (
-              <motion.div
-                key={tile.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <Link href={tile.href} className="group block">
-                  <div className="overflow-hidden mb-5">
-                    <img
-                      src={tile.image}
-                      alt={tile.alt}
-                      loading="lazy"
-                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="font-heading text-xl uppercase text-foreground mb-2">{tile.title}</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed mb-3">{tile.body}</p>
-                  <span className="text-primary font-bold text-xs uppercase tracking-wide group-hover:underline">
-                    Learn more →
-                  </span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. SOCIAL PROOF ──────────────────────────────────── */}
+      {/* ── 4. SOCIAL PROOF ──────────────────────────────────── */}
       <section className="py-24 px-4 border-t border-border bg-background">
         <div className="container mx-auto max-w-5xl">
           <motion.h2
@@ -223,6 +181,48 @@ export default function Home() {
                     <p className="text-primary text-xs font-bold uppercase">{t.label}</p>
                   </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. WHAT MAKES IT REAL ────────────────────────────── */}
+      <section className="py-24 px-4 bg-background border-t border-border">
+        <div className="container mx-auto max-w-5xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-heading uppercase text-center text-foreground mb-12"
+          >
+            What makes it real
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {TILES.map((tile, i) => (
+              <motion.div
+                key={tile.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <Link href={tile.href} className="group block">
+                  <div className="overflow-hidden mb-5">
+                    <img
+                      src={tile.image}
+                      alt={tile.alt}
+                      loading="lazy"
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 className="font-heading text-xl uppercase text-foreground mb-2">{tile.title}</h3>
+                  <p className="text-foreground/60 text-sm leading-relaxed mb-3">{tile.body}</p>
+                  <span className="text-primary font-bold text-xs uppercase tracking-wide group-hover:underline">
+                    Learn more →
+                  </span>
+                </Link>
               </motion.div>
             ))}
           </div>
