@@ -69,6 +69,14 @@ const TESTIMONIALS = [
     photo: "/images/testimonial-tom.webp",
     initial: "T",
   },
+  {
+    pull: "One of the most unexpected experiences of my life.",
+    quote: "I met such fantastic people and never imagined I'd become so invested. Would play over and over if I could.",
+    name: "Brian",
+    label: "Season 4",
+    photo: "/images/testimonial-brian.webp",
+    initial: "B",
+  },
 ];
 
 function TestimonialCarousel() {
