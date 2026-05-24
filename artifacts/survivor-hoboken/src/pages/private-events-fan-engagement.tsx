@@ -47,9 +47,9 @@ function InstagramEmbed({ url }: { url: string }) {
 
 export default function FanEngagement() {
   usePageMeta({
-    title: "Fan Engagement Experiences | Survivor Hoboken",
+    title: "Live Survivor Challenges for Survivor Night Events | Fan Engagement | Survivor Hoboken",
     description:
-      "Bring live Survivor challenges to your stadium, arena, festival, or brand activation. Real immunity challenges. Real crowd energy.",
+      "Elevate your Survivor Night or fan engagement event with real, life-size Survivor challenges. We bring authentic immunity challenges to stadiums, arenas, and festivals nationwide — giving fans a live Survivor experience right on the concourse.",
   });
 
   return (
@@ -226,7 +226,30 @@ export default function FanEngagement() {
 
           <ChallengeSlider />
 
-          <ReviewsSlider />
+          {/* Big CTA */}
+          <div className="mt-20 bg-foreground border-4 border-foreground brutal-shadow text-center px-8 py-16">
+            <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
+              Survivor Night · Stadium Events · Fan Activations
+            </p>
+            <h2 className="text-4xl md:text-6xl font-heading uppercase text-white leading-tight mb-6">
+              Elevate Your Survivor Night<br />
+              <span className="text-primary">With Real Challenges for Fans</span>
+            </h2>
+            <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-4">
+              We bring life-size, authentic Survivor immunity challenges directly to your concourse, field, or event floor. Fans compete head-to-head in front of a crowd — real energy, real competition, real Survivor.
+            </p>
+            <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+              Available for stadiums, arenas, festivals, and brand activations nationwide.
+            </p>
+            <a
+              href="https://meetings-na2.hubspot.com/matthew-carlson/private-events-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-white font-heading text-xl px-10 py-5 border-4 border-white brutal-shadow hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase"
+            >
+              Schedule 15-min Call
+            </a>
+          </div>
         </div>
       </section>
 
