@@ -113,8 +113,21 @@ const TESTIMONIALS = [
 
 function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
+  const [cardsVisible, setCardsVisible] = useState(3);
   const n = TESTIMONIALS.length;
-  const cardWidth = 100 / 3; // percent per card (3 visible)
+
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth < 768) setCardsVisible(1);
+      else if (window.innerWidth < 1024) setCardsVisible(2);
+      else setCardsVisible(3);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  const cardWidth = 100 / cardsVisible;
 
   const prev = useCallback(() => setIndex((i) => (i - 1 + n) % n), [n]);
   const next = useCallback(() => setIndex((i) => (i + 1) % n), [n]);
@@ -124,7 +137,7 @@ function TestimonialCarousel() {
     return () => clearInterval(timer);
   }, [next]);
 
-  // Duplicate cards to create seamless loop: [...last2, ...all, ...first2]
+  // Pad with 2 clones at each end for seamless looping
   const looped = [
     TESTIMONIALS[n - 2],
     TESTIMONIALS[n - 1],
@@ -132,22 +145,22 @@ function TestimonialCarousel() {
     TESTIMONIALS[0],
     TESTIMONIALS[1],
   ];
-  const offset = index + 2; // account for the 2 prepended cards
+  const offset = index + 2;
 
   return (
-    <section className="py-24 px-4 border-t border-border bg-foreground">
+    <section className="py-16 md:py-24 px-4 border-t border-border bg-foreground">
       <div className="container mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-heading uppercase text-center text-background mb-12"
+          className="text-3xl md:text-5xl font-heading uppercase text-center text-background mb-8 md:mb-12"
         >
           From the players
         </motion.h2>
 
-        <div className="relative">
-          {/* Track */}
+        {/* Arrows sit outside overflow-hidden; px-10 gives them room on mobile */}
+        <div className="relative px-10 md:px-0">
           <div className="overflow-hidden">
             <motion.div
               className="flex"
@@ -158,20 +171,20 @@ function TestimonialCarousel() {
               {looped.map((t, i) => (
                 <div
                   key={i}
-                  className="px-3"
+                  className="px-2 md:px-3"
                   style={{ width: `${100 / looped.length}%` }}
                 >
-                  <div className="bg-background rounded-sm p-8 flex flex-col items-center text-center h-full">
+                  <div className="bg-background rounded-sm p-5 md:p-8 flex flex-col items-center text-center h-full">
                     <img
                       src={t.photo}
                       alt={t.name}
-                      className="w-32 h-32 rounded-full object-cover border-4 border-primary mb-6"
+                      className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-primary mb-5"
                       loading="lazy"
                     />
-                    <p className="text-lg font-heading uppercase text-foreground mb-3 leading-tight">
+                    <p className="text-base md:text-lg font-heading uppercase text-foreground mb-3 leading-tight">
                       {t.pull}
                     </p>
-                    <p className="text-foreground/70 text-sm leading-relaxed mb-6 flex-1">
+                    <p className="text-foreground/70 text-sm leading-relaxed mb-5 flex-1">
                       "{t.quote}"
                     </p>
                     <div>
@@ -184,18 +197,18 @@ function TestimonialCarousel() {
             </motion.div>
           </div>
 
-          {/* Arrows */}
+          {/* Arrows — inside px-10 gutter on mobile, extended outside on desktop */}
           <button
             onClick={prev}
             aria-label="Previous testimonial"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
+            className="absolute left-0 top-1/2 -translate-y-1/2 md:-translate-x-5 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
           >
             ‹
           </button>
           <button
             onClick={next}
             aria-label="Next testimonial"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
+            className="absolute right-0 top-1/2 -translate-y-1/2 md:translate-x-5 w-9 h-9 md:w-10 md:h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
           >
             ›
           </button>
@@ -243,7 +256,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="relative z-10 px-4 max-w-4xl mx-auto pt-24"
+          className="relative z-10 px-4 max-w-4xl mx-auto pt-16 md:pt-20"
         >
           <img
             src="/images/logo.png"

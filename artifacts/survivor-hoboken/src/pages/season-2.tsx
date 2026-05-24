@@ -15,7 +15,7 @@ export default function Season2() {
   }, []);
 
   return (
-    <div className="w-full pt-24 bg-background min-h-screen">
+    <div className="w-full pt-16 md:pt-20 bg-background min-h-screen">
       <div className="py-16 px-4 border-b border-border">
         <div className="container mx-auto max-w-3xl">
           <Link href="/season-recaps" className="text-sm font-bold uppercase tracking-wide text-foreground/60 hover:text-primary transition-colors mb-6 inline-block">

@@ -51,7 +51,7 @@ export default function BirthdayParties() {
   );
 
   return (
-    <div className="w-full pt-24">
+    <div className="w-full pt-16 md:pt-20">
       <div className="bg-foreground text-background py-20 px-4 border-b-4 border-primary">
         <div className="container mx-auto max-w-5xl">
           <Link href="/private-events" className="inline-block text-background/60 hover:text-primary font-bold uppercase text-sm tracking-wide mb-8 transition-colors">

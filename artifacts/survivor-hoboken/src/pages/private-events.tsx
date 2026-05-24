@@ -28,7 +28,7 @@ const eventTypes = [
 
 export default function PrivateEvents() {
   return (
-    <div className="w-full pt-24">
+    <div className="w-full pt-16 md:pt-20">
       <div className="bg-secondary text-secondary-foreground py-24 px-4 border-b-4 border-foreground relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
@@ -54,14 +54,14 @@ export default function PrivateEvents() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="flex-1 relative aspect-square w-full max-w-md brutal-shadow border-4 border-primary transform rotate-3"
+            className="flex-1 relative w-full max-w-md border-4 border-primary md:rotate-3"
           >
             <img
               src="/images/private-events.png"
               alt="Private Events Team Building"
-              className="w-full h-full object-cover filter contrast-125"
+              className="w-full aspect-square object-cover filter contrast-125"
             />
-            <div className="absolute -bottom-6 -left-6 bg-primary text-white font-heading text-2xl p-4 brutal-shadow transform -rotate-6">
+            <div className="absolute -bottom-4 -left-4 bg-primary text-white font-heading text-xl p-3 transform -rotate-3 hidden md:block">
               TEAM BUILDING
             </div>
           </motion.div>

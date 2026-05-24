@@ -33,12 +33,12 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b-4 border-primary shadow-sm">
-      <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center z-50 group">
           <img
             src="/images/logo.png"
             alt="Survivor Hoboken"
-            className="h-18 w-auto"
+            className="h-10 md:h-14 w-auto"
           />
         </Link>
 
@@ -81,7 +81,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-0 left-0 right-0 bg-background border-b-4 border-foreground shadow-2xl pt-24 pb-8 px-6 lg:hidden"
+            className="absolute top-0 left-0 right-0 bg-background border-b-4 border-foreground shadow-2xl pt-16 md:pt-20 pb-8 px-6 lg:hidden"
           >
             <nav className="flex flex-col gap-6 items-center text-center">
               {links.map((link) => (

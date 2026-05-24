@@ -74,7 +74,7 @@ export default function Challenges() {
   );
 
   return (
-    <div className="w-full pt-24">
+    <div className="w-full pt-16 md:pt-20">
       <div className="bg-primary text-primary-foreground py-16 px-4 border-b-4 border-foreground text-center">
         <div className="container mx-auto max-w-4xl">
           <motion.h1
