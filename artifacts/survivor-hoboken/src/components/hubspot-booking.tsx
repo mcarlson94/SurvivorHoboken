@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function HubspotBooking() {
+export function HubspotBooking({ subtitle }: { subtitle?: string } = {}) {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
@@ -19,7 +19,7 @@ export function HubspotBooking() {
           The Tribe Has Spoken
         </h2>
         <p className="text-background/60 text-lg mb-8">
-          It's time to plan your event. Book a 15-min call or reach out directly.
+          {subtitle ?? "It's time to plan your event. Book a 15-min call or reach out directly."}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
           <a

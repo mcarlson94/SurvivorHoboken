@@ -230,7 +230,7 @@ export default function PrivateGames() {
 
           <ReviewsSlider reviews={GAME_REVIEWS} />
 
-          <HubspotBooking />
+          <HubspotBooking subtitle="It's time to book your private Survivor game." />
 
           <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">Frequently Asked Questions</h2>
           <div className="space-y-6 mb-16">
