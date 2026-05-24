@@ -109,22 +109,26 @@ export default function FanEngagement() {
                   <p className="text-primary font-heading text-sm uppercase tracking-widest mb-4">
                     As Seen At
                   </p>
-                  <div className="inline-block bg-background border-4 border-primary p-4 mb-6">
-                    <img
-                      src="/images/client-logo-1.png"
-                      alt="Somerset Patriots"
-                      className="h-28 w-auto object-contain"
-                    />
+                  <div className="flex flex-col md:flex-row md:items-start gap-8">
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-heading uppercase text-background mb-4">
+                        Somerset Patriots Survivor 50 Night
+                      </h3>
+                      <p className="text-background/80 text-lg leading-relaxed">
+                        We brought live Survivor challenges to the concourse at a Somerset Patriots game, giving fans a real immunity challenge experience between innings. The crowd loved it — real competition, real energy, right on the concourse.
+                      </p>
+                      <p className="text-primary font-heading text-sm uppercase tracking-widest mt-4">
+                        Minor League Baseball ✦ TD Bank Ballpark
+                      </p>
+                    </div>
+                    <div className="shrink-0 bg-white border-4 border-primary p-4">
+                      <img
+                        src="/images/client-logo-1.png"
+                        alt="Somerset Patriots"
+                        className="h-28 w-auto object-contain"
+                      />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-heading uppercase text-background mb-4">
-                    Somerset Patriots Survivor 50 Night
-                  </h3>
-                  <p className="text-background/80 text-lg leading-relaxed">
-                    We brought live Survivor challenges to the concourse at a Somerset Patriots game, giving fans a real immunity challenge experience between innings. The crowd loved it — real competition, real energy, right on the concourse.
-                  </p>
-                  <p className="text-primary font-heading text-sm uppercase tracking-widest mt-4">
-                    Minor League Baseball ✦ TD Bank Ballpark
-                  </p>
                 </div>
               </div>
             </div>
