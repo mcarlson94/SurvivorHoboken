@@ -10,7 +10,7 @@ export default function SeasonRecaps() {
       image: "/images/survivor-hoboken-winner-jacqui-may-2025.webp",
       title: "Sole Survivor: Jacqui",
       desc: "May 16th One Day Game. Jacqui outlasted the competition in a single-day showdown.",
-      href: "",
+      href: "/one-day-game-516",
     },
     {
       id: "SZN 4",
