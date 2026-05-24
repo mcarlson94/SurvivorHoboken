@@ -101,6 +101,14 @@ const TESTIMONIALS = [
     photo: "/images/testimonial-jake.webp",
     initial: "J",
   },
+  {
+    pull: "One of the best days of my life.",
+    quote: "It somehow captured the strategy, chaos, social dynamics, and adrenaline of the actual game while still being incredibly fun and well-run. Something I will never forget.",
+    name: "Jacqui",
+    label: "5/16/26 One-Day Game",
+    photo: "/images/testimonial-jacqui.webp",
+    initial: "J",
+  },
 ];
 
 function TestimonialCarousel() {
