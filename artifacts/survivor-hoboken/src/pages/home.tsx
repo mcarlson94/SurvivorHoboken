@@ -85,6 +85,14 @@ const TESTIMONIALS = [
     photo: "/images/testimonial-aliya.webp",
     initial: "A",
   },
+  {
+    pull: "A lot of fun! I got to play Survivor!",
+    quote: "I was really excited for the challenges, and they were awesome to compete in. I was curious to see how this would run — and it turned out to be an incredible experience.",
+    name: "Tyler",
+    label: "Survivor Manhattan",
+    photo: "/images/testimonial-tyler.webp",
+    initial: "T",
+  },
 ];
 
 function TestimonialCarousel() {
