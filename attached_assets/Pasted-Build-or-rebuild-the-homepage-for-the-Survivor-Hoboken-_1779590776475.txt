@@ -1,0 +1,47 @@
+Build (or rebuild) the homepage for the Survivor Hoboken site. Reuse the existing header/nav and footer. Match the brand: dark charcoal background, gold (#F0B429) and flame red (#C0392B) accents, off-white text, elegant serif for headings, clean sans-serif for body. Mobile-first — most traffic is on phones.
+This homepage serves two audiences equally: people who want to HIRE us for private events, and people who want to PLAY in a season. Both paths get equal visual weight — do not make either one secondary.
+Build these sections top to bottom:
+1. Hero — full-bleed background (I'll provide a live-game photo or short muted autoplaying video).
+
+Serif headline: "The real Survivor experience, brought to life."
+Subhead: "Live competition built on real challenges, real strategy, and real stakes — for our hometown seasons and for your team, your party, or your celebration."
+Two equal-size buttons side by side, identical gold style and dimensions:
+
+"Bring Survivor to your event" → /private-events/
+"Play in a season" → /play/
+
+
+Small line beneath the buttons: "Serving the NYC & NJ metro area."
+On mobile, stack the buttons full-width, still equal.
+
+2. Choose your path — two equal cards side by side (stack on mobile), visually identical in size and style:
+
+Card A: title "Hire Survivor Hoboken", text "Custom Survivor experiences for corporate events, birthdays, bachelor & bachelorette parties, weddings, and multi-day getaways. We bring the challenges, the host, and the production.", button "Explore private events" → /private-events/
+Card B: title "Play in Survivor Hoboken", text "Our live, multi-season game played across Hoboken. Compete in real challenges, outlast your tribe, and join an alumni community five seasons strong.", button "Apply to play" → [APPLY URL]
+
+3. Proof bar — slim full-width strip, four proof points evenly spaced, small and quiet styling: "5 seasons of real gameplay" · "Real champions crowned" · "Featured at the Somerset Patriots" · "NYC & NJ metro area".
+4. What makes it real — three photo tiles in a row (stack on mobile), each with a photo, short title, and one line:
+
+"Real challenges": "Custom-built immunity challenges from our actual seasons — balance, puzzles, endurance, and teamwork." → /challenges/
+"Live competition": "Professionally hosted, Jeff-Probst-style, with tribal councils and real stakes." → /private-events/
+"Built for any group": "From an intimate party to a 24-player multi-day game, we scale the experience to your event." → /private-events/
+
+5. Social proof — one or two short testimonials plus a few event photos. Leave editable placeholders for the quotes and names (ideally one private-events client quote and one player quote).
+6. Closing CTA — gold eyebrow "READY TO PLAY?", serif headline "The tribe has spoken.", line "Let's build your Survivor experience.", two equal buttons: "Book your event" → /private-events/ and "Apply to play" → [APPLY URL].
+Then the footer: mission statement, "Serving the NYC & NJ metro area", contact info, and the disclaimer "This local competition is not affiliated with Survivor on CBS."
+Config to edit first:
+
+[APPLY URL] = the Apply-to-Play page or form link
+Hero media file + the three tile photos + testimonial photos
+Confirm the proof-bar numbers are accurate (especially "5 seasons" — verify against your current season count)
+Drop in your finalized mission statement for the footer
+
+Technical / SEO:
+
+Page title: "Survivor Hoboken | Live Survivor Games & Private Events in NJ & NYC"
+Meta description: "Survivor Hoboken runs live, multi-season Survivor games and brings custom Survivor experiences to private events, corporate teams, and celebrations across the NYC & NJ metro area."
+Keep all copy as editable constants.
+Descriptive alt text on every image; compress images; lazy-load below-the-fold; eager-load the hero. If using hero video: muted, autoplay, loop, playsinline, with a poster image and a static image fallback on mobile.
+Keep the footer disclaimer.
+
+Build it, reuse the existing nav/footer, and show me the result.
