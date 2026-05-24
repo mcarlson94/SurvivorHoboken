@@ -74,28 +74,29 @@ const TESTIMONIALS = [
 function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const n = TESTIMONIALS.length;
 
   const go = useCallback((next: number) => {
     setDirection(next > index ? 1 : -1);
     setIndex(next);
   }, [index]);
 
-  const prev = () => go((index - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
-  const next = () => go((index + 1) % TESTIMONIALS.length);
+  const prev = () => go((index - 1 + n) % n);
+  const next = () => go((index + 1) % n);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1);
-      setIndex((i) => (i + 1) % TESTIMONIALS.length);
+      setIndex((i) => (i + 1) % n);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [n]);
 
-  const t = TESTIMONIALS[index];
+  const visible = [0, 1, 2].map((offset) => TESTIMONIALS[(index + offset) % n]);
 
   return (
     <section className="py-24 px-4 border-t border-border bg-foreground overflow-hidden">
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-6xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,47 +111,53 @@ function TestimonialCarousel() {
             <motion.div
               key={index}
               custom={direction}
-              initial={{ x: direction * 80, opacity: 0 }}
+              initial={{ x: direction * 120, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: direction * -80, opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="bg-background rounded-sm p-10 text-center"
+              exit={{ x: direction * -120, opacity: 0 }}
+              transition={{ duration: 0.45, ease: "easeInOut" }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
             >
-              <img
-                src={t.photo}
-                alt={t.name}
-                className="w-20 h-20 rounded-full object-cover border-4 border-primary mx-auto mb-6"
-              />
-              <p className="text-2xl md:text-3xl font-heading uppercase text-foreground mb-4 leading-tight">
-                {t.pull}
-              </p>
-              <p className="text-foreground/70 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-                "{t.quote}"
-              </p>
-              <p className="font-heading uppercase text-foreground text-base">{t.name}</p>
-              <p className="text-primary text-sm font-bold uppercase tracking-wide">{t.label}</p>
+              {visible.map((t, i) => (
+                <div key={t.name + i} className="bg-background rounded-sm p-8 flex flex-col items-center text-center">
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="w-32 h-32 rounded-full object-cover border-4 border-primary mb-6"
+                  />
+                  <p className="text-lg font-heading uppercase text-foreground mb-3 leading-tight">
+                    {t.pull}
+                  </p>
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-6 flex-1">
+                    "{t.quote}"
+                  </p>
+                  <div>
+                    <p className="font-heading uppercase text-foreground text-sm">{t.name}</p>
+                    <p className="text-primary text-xs font-bold uppercase tracking-wide">{t.label}</p>
+                  </div>
+                </div>
+              ))}
             </motion.div>
           </AnimatePresence>
 
           {/* Arrows */}
           <button
             onClick={prev}
-            aria-label="Previous testimonial"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:opacity-80 transition-opacity"
+            aria-label="Previous testimonials"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-10 h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
           >
             ‹
           </button>
           <button
             onClick={next}
-            aria-label="Next testimonial"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:opacity-80 transition-opacity"
+            aria-label="Next testimonials"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-10 h-10 flex items-center justify-center bg-primary text-white text-xl rounded-full hover:opacity-80 transition-opacity"
           >
             ›
           </button>
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-10">
           {TESTIMONIALS.map((_, i) => (
             <button
               key={i}
