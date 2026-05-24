@@ -103,7 +103,7 @@ export default function FanEngagement() {
           {/* Venue types */}
           <div className="mb-20">
             <h2 className="text-3xl md:text-4xl font-heading uppercase mb-10">
-              Where We Activate
+              Where We Can Activate
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
