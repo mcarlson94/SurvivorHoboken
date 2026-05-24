@@ -33,6 +33,13 @@ const eventTypes = [
     color: "bg-primary",
     rotate: "-rotate-1",
   },
+  {
+    href: "/private-events/private-games",
+    title: "Private Games",
+    tagline: "Weekend getaway, friend trip, or reunion — we'll turn it into the ultimate Survivor experience.",
+    color: "bg-secondary",
+    rotate: "rotate-1",
+  },
 ];
 
 export default function PrivateEvents() {
