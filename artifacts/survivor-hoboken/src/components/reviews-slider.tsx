@@ -11,9 +11,9 @@ const REVIEWS = [
   },
   {
     name: "Cary",
-    label: "NJ Birthday Party \u2014 Feb 2026",
-    pull: "\u201CWorth every penny. Highly recommend!\u201D",
-    quote: "We hired Survivor Hoboken for my son's 13th birthday and it was absolutely incredible. From the second the host arrived he brought nonstop energy and had the kids completely engaged. The challenges felt like a real Survivor experience and everyone was all in the entire time (which is saying a lot for a group of middle schoolers!)\n\nMy son is a huge Survivor fan and this was truly a core memory for him. He hasn't stopped talking about it. The kids were screaming, strategizing, and having the best time, and the parents are still texting me about how amazing it was. Worth every penny. Highly recommend!",
+    label: "NYC 31st Birthday Party \u2014 May 2025",
+    pull: "\u201CA fun and unique birthday event!\u201D",
+    quote: "Matt was very professional through all the prep and ultimately pulled together an awesome set of challenges that all the guests loved. Highly recommend this for a fun and unique birthday event!",
     photo: null,
   },
   {
@@ -25,9 +25,9 @@ const REVIEWS = [
   },
   {
     name: "Rachel",
-    label: "NYC 31st Birthday Party \u2014 May 2025",
-    pull: "\u201CA fun and unique birthday event!\u201D",
-    quote: "Matt was very professional through all the prep and ultimately pulled together an awesome set of challenges that all the guests loved. Highly recommend this for a fun and unique birthday event!",
+    label: "NJ Birthday Party \u2014 Feb 2026",
+    pull: "\u201CWorth every penny. Highly recommend!\u201D",
+    quote: "We hired Survivor Hoboken for my son's 13th birthday and it was absolutely incredible. From the second the host arrived he brought nonstop energy and had the kids completely engaged. The challenges felt like a real Survivor experience and everyone was all in the entire time (which is saying a lot for a group of middle schoolers!)\n\nMy son is a huge Survivor fan and this was truly a core memory for him. He hasn't stopped talking about it. The kids were screaming, strategizing, and having the best time, and the parents are still texting me about how amazing it was. Worth every penny. Highly recommend!",
     photo: null,
   },
 ];
