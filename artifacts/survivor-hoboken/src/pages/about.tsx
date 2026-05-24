@@ -38,7 +38,7 @@ export default function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-3"
+              className="grid grid-cols-2 gap-3 order-2 md:order-1"
             >
               <img
                 src="/images/matt-1.png"
@@ -64,6 +64,7 @@ export default function About() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="order-1 md:order-2"
             >
               <h2 className="text-4xl md:text-6xl font-heading mb-8 uppercase leading-none">
                 MEET YOUR<br/>
