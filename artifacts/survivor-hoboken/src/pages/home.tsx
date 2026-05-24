@@ -21,9 +21,9 @@ const TILES = [
     href: "/challenges",
   },
   {
-    image: "/images/challenge-field.jpeg",
-    alt: "Survivor Hoboken host running a live immunity challenge outdoors with competing tribes",
-    title: "Live Competition",
+    image: "/images/survivor-hoboken-hosting.webp",
+    alt: "Survivor Hoboken host reading votes Jeff Probst-style at a live tribal council",
+    title: "Jeff Probst-Style Hosting",
     body: "Professionally hosted, Jeff-Probst-style, with tribal councils and real stakes.",
     href: "/private-events",
   },
