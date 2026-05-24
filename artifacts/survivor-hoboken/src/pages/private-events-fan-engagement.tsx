@@ -100,31 +100,6 @@ export default function FanEngagement() {
       <section className="py-24 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
 
-          {/* Venue types */}
-          <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-heading uppercase mb-10">
-              Where We Can Activate
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { label: "Stadiums & Arenas", icon: "🏟️" },
-                { label: "Survivor Nights", icon: "🔥" },
-                { label: "Festivals & Fairs", icon: "🎪" },
-                { label: "Trade Shows", icon: "🤝" },
-                { label: "Brand Activations", icon: "📣" },
-                { label: "Sponsor Events", icon: "🏆" },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-card border-4 border-foreground p-5 flex items-center gap-3 brutal-shadow"
-                >
-                  <span className="text-2xl">{item.icon}</span>
-                  <span className="font-heading text-sm uppercase leading-tight">{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Somerset Patriots section */}
           <div className="mb-20">
             {/* Header with logo */}
@@ -194,6 +169,31 @@ export default function FanEngagement() {
           {/* Somerset Patriots Instagram Reel */}
           <div className="mb-20">
             <InstagramEmbed url="https://www.instagram.com/reel/DYATD5KRkEx/" />
+          </div>
+
+          {/* Venue types */}
+          <div className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-heading uppercase mb-10">
+              Where We Can Activate
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                { label: "Stadiums & Arenas", icon: "🏟️" },
+                { label: "Survivor Nights", icon: "🔥" },
+                { label: "Festivals & Fairs", icon: "🎪" },
+                { label: "Trade Shows", icon: "🤝" },
+                { label: "Brand Activations", icon: "📣" },
+                { label: "Sponsor Events", icon: "🏆" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="bg-card border-4 border-foreground p-5 flex items-center gap-3 brutal-shadow"
+                >
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="font-heading text-sm uppercase leading-tight">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* What makes it stand out */}
