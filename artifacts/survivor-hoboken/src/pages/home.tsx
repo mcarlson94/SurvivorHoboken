@@ -28,7 +28,7 @@ const TILES = [
     href: "/private-events",
   },
   {
-    image: "/images/challenge-ring-toss.jpeg",
+    image: "/images/survivor-hoboken-group.webp",
     alt: "Groups of players competing together in a Survivor Hoboken team challenge",
     title: "Built for Any Group",
     body: "From an intimate party to a 24-player multi-day game, we scale the experience to your event.",
