@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const challenges = [
   {
-    src: "/images/ch-snake-maze.png",
-    alt: "Giant Snake Mazes",
+    src: "/images/survivor-hoboken-snake-maze-challenge.webp",
+    alt: "Players maneuvering a ball up a giant snake maze immunity challenge at Survivor Hoboken",
     name: "Giant Snake Mazes",
     season: "As seen on Survivor SZN 28",
     description: "Two eight-foot snakes — blue and yellow — stand head to head. Working the pulleys, castaways guide a ball up through every twist and curve to the top. First to land it claims immunity. Sets up in minutes and reads from clear across the room.",
@@ -11,8 +12,8 @@ const challenges = [
     tags: ["HEAD-TO-HEAD", "BLUE vs. YELLOW", "INDOOR OR OUTDOOR"],
   },
   {
-    src: "/images/ch-a-bit-tipsy.png",
-    alt: "A Bit Tipsy",
+    src: "/images/survivor-hoboken-a-bit-tipsy-balance-challenge.webp",
+    alt: "Castaways balancing stacked immunity tiles on a wobbling board in Survivor Hoboken's A Bit Tipsy challenge",
     name: "A Bit Tipsy (Individual)",
     season: "As seen on Survivor 50",
     description: "Balance is everything. Players steady a wobbling board while stacking tiles one at a time to spell IMMUNITY — lose your nerve and it all topples. It's one of our toughest; runs can stretch past twenty minutes. Five castaways can battle at once.",
@@ -20,8 +21,8 @@ const challenges = [
     tags: ["SOLO", "4 STATIONS", "20+ MIN", "HIGH DIFFICULTY"],
   },
   {
-    src: "/images/ch-table-maze.png",
-    alt: "Table Maze",
+    src: "/images/survivor-hoboken-table-maze-challenge.webp",
+    alt: "Tribe members steering balls through a tabletop maze during a Survivor Hoboken immunity challenge",
     name: "Table Maze",
     season: "As seen on Survivor SZN 35",
     description: "Precision under pressure. Tribes tilt and steer three balls through a winding maze — first to clear all three takes it. Mount it on a table and players compete standing, which makes it perfect for tighter indoor spaces. Run two and four can play at once.",
@@ -29,8 +30,8 @@ const challenges = [
     tags: ["2–4 PER TEAM", "~2 MIN", "TABLETOP", "INDOOR FRIENDLY"],
   },
   {
-    src: "/images/ch-bow-diddley.png",
-    alt: "Full-Size Bow Diddley",
+    src: "/images/survivor-hoboken-bow-diddley-balance-challenge.webp",
+    alt: "Contestants holding a ball balanced on a bow in Survivor Hoboken's full-size Bow Diddley endurance challenge",
     name: "Full-Size Bow Diddley",
     season: "As seen on Survivor 50",
     description: "Steady hands win. Players balance a ball on the bow and hold it as long as they can — drop it and you're out, last castaway standing wins. Want it harder? We have them balance on one foot and switch. Six can compete side by side.",
@@ -38,8 +39,8 @@ const challenges = [
     tags: ["SOLO ELIMINATION", "6 BOWS", "UP TO 10 MIN", "SCALABLE"],
   },
   {
-    src: "/images/ch-stacked-up.png",
-    alt: "Stacked Up",
+    src: "/images/survivor-hoboken-stacked-up-challenge.webp",
+    alt: "Castaways using a rod to build a five-ball tower in Survivor Hoboken's Stacked Up challenge",
     name: "Stacked Up",
     season: "As seen on Survivor 48",
     description: "Patience and a steady rod. Castaways ferry balls and discs back and forth, racing to build a tower five balls high topped with a disc. One slip and the whole stack collapses — back to the start. Four can go head to head.",
@@ -47,8 +48,8 @@ const challenges = [
     tags: ["HEAD-TO-HEAD", "4 STATIONS", "HIGH DIFFICULTY", "INDOOR OR OUTDOOR"],
   },
   {
-    src: "/images/ch-team-immunity-stack.png",
-    alt: "Team Immunity Stack",
+    src: "/images/survivor-hoboken-team-immunity-stack-challenge.webp",
+    alt: "Five players gripping a shared rope while stacking immunity blocks in Survivor Hoboken's team challenge",
     name: "Team Immunity Stack",
     season: "As seen on Survivor 36",
     description: "Five tribemates grip a single rope to hoist a platform off the ground, then take turns placing blocks to spell IMMUNITY. One wobble too many and the whole tower comes down — start over. First tribe to spell it and hold steady claims the win. Can your tribe keep it together?",
@@ -56,8 +57,8 @@ const challenges = [
     tags: ["5 PER TRIBE", "~20 MIN", "BEST OUTDOORS", "NEEDS 40 FT"],
   },
   {
-    src: "/images/ch-survivor-puzzles.png",
-    alt: "Survivor Style Puzzles",
+    src: "/images/survivor-hoboken-survivor-style-puzzles.webp",
+    alt: "Custom Survivor Hoboken puzzles including tower, flame, seahorse, and slide puzzle designs for live events",
     name: "Survivor Style Puzzles",
     season: "As seen on Survivor",
     description: "Our custom puzzle arsenal, built for team races: tower puzzles, flame puzzles, seahorse puzzles, and Survivor Hoboken slide puzzles. We mix and match for rounds that run from a five-minute sprint to a fifteen-minute team brain-burner. Outthink the other tribe.",
@@ -67,6 +68,11 @@ const challenges = [
 ];
 
 export default function Challenges() {
+  usePageMeta(
+    "Survivor Challenges for Events | Survivor Hoboken",
+    "Real, custom-built Survivor immunity challenges we run across our live seasons — balance, puzzle, endurance, and team challenges for events in the NYC & NJ metro area."
+  );
+
   return (
     <div className="w-full pt-24">
       <div className="bg-primary text-primary-foreground py-16 px-4 border-b-4 border-foreground text-center">
@@ -86,6 +92,7 @@ export default function Challenges() {
           <div className="space-y-28">
             {challenges.map((item, i) => {
               const isEven = i % 2 === 0;
+              const isFirst = i === 0;
               return (
                 <motion.div
                   key={item.name}
@@ -96,10 +103,16 @@ export default function Challenges() {
                   className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-10 md:gap-16 items-center`}
                 >
                   <div className="w-full md:w-1/2 shrink-0">
-                    <div className="relative w-full overflow-hidden rounded-lg" style={{ aspectRatio: "4/3" }}>
+                    <div
+                      className="relative w-full overflow-hidden rounded-lg"
+                      style={{ aspectRatio: "4/3" }}
+                    >
                       <img
                         src={item.src}
                         alt={item.alt}
+                        loading={isFirst ? "eager" : "lazy"}
+                        width={800}
+                        height={600}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                     </div>
