@@ -4,6 +4,7 @@ import { HubspotBooking } from "@/components/hubspot-booking";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
+import { ReviewsSlider } from "@/components/reviews-slider";
 
 const testimonials = [
   {
@@ -203,34 +204,7 @@ export default function BirthdayParties() {
             </a>
           </div>
 
-          <div className="bg-foreground text-background p-8 border-4 border-foreground brutal-shadow mb-8">
-            <h3 className="font-heading text-xl uppercase mb-4 text-primary">Recent Birthday Party Review:</h3>
-            <blockquote className="text-lg leading-relaxed">
-              "We hired Survivor Hoboken for my son's 13th birthday and it was absolutely incredible. From the second the host arrived he brought nonstop energy and had the kids completely engaged. The challenges felt like a real Survivor experience and everyone was all in the entire time (which is saying a lot for a group of middle schoolers!).<br /><br />
-              My son is a huge Survivor fan and this was truly a core memory for him — he hasn't stopped talking about it. The kids were screaming, strategizing, and having the best time, and the parents are still texting me about how amazing it was. Worth every penny. Highly recommend!"
-              <footer className="mt-3 text-background/70 font-bold">— NJ, 2/15/26</footer>
-            </blockquote>
-          </div>
-
-          <div className="bg-foreground text-background p-8 border-4 border-foreground brutal-shadow mb-16">
-            <blockquote className="text-lg leading-relaxed">
-              "Matt was very professional through all the prep and ultimately pulled together an awesome set of challenges that all the guests loved. Highly recommend this for a fun and unique birthday event!"
-              <footer className="mt-3 text-background/70 font-bold">— NYC, 31st Birthday Party, 5/3/25</footer>
-            </blockquote>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">From Players Who Have Played Matt's Games</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-card border-4 border-foreground p-6 brutal-shadow flex flex-col">
-                <p className="text-foreground/80 flex-1 mb-4">"{t.quote}"</p>
-                <div>
-                  <p className="font-heading text-lg uppercase">{t.name}</p>
-                  <p className="text-sm text-foreground/60 font-bold uppercase">{t.season}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsSlider />
 
 
           <HubspotBooking />

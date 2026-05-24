@@ -4,6 +4,7 @@ import { HubspotBooking } from "@/components/hubspot-booking";
 import { usePageMeta } from "@/hooks/use-page-meta";
 import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
+import { ReviewsSlider } from "@/components/reviews-slider";
 
 const testimonials = [
   {
@@ -194,18 +195,7 @@ export default function BachelorParties() {
             </a>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-heading uppercase mb-8">From Players Who Have Played Matt's Games</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-card border-4 border-foreground p-6 brutal-shadow flex flex-col">
-                <p className="text-foreground/80 flex-1 mb-4">"{t.quote}"</p>
-                <div>
-                  <p className="font-heading text-lg uppercase">{t.name}</p>
-                  <p className="text-sm text-foreground/60 font-bold uppercase">{t.season}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsSlider />
 
 
           <HubspotBooking />
