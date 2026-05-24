@@ -236,7 +236,7 @@ export default function FanEngagement() {
               <span className="text-primary">With Real Challenges for Fans</span>
             </h2>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-4">
-              We bring life-size, authentic Survivor immunity challenges directly to your concourse, field, or event floor. Fans compete head-to-head in front of a crowd — real energy, real competition, real Survivor.
+              We bring life-size, authentic Survivor immunity challenges directly to your concourse, field, or event floor. Fans compete head-to-head in front of a crowd: real energy, real competition, real Survivor.
             </p>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10">
               Available for stadiums, arenas, festivals, and brand activations nationwide.
