@@ -55,7 +55,7 @@ export default function About() {
                 <img
                   src="/images/matt-4.jpeg"
                   alt="Matt Carlson"
-                  className="relative z-10 w-full h-60 object-cover object-center border-4 border-foreground"
+                  className="relative z-10 w-full h-60 object-cover object-top border-4 border-foreground"
                 />
               </div>
             </motion.div>
