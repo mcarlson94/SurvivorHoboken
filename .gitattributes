@@ -1,0 +1,2 @@
+artifacts/survivor-hoboken/public/videos/corporate-event.mov filter=lfs diff=lfs merge=lfs -text
+attached_assets/copy_EAC05A50-1C40-4043-89DE-99B6E55F20BD_1781552932236.mov filter=lfs diff=lfs merge=lfs -text

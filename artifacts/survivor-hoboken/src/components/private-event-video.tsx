@@ -1,4 +1,4 @@
-export function PrivateEventVideo({ videoId }: { videoId?: string }) {
+export function PrivateEventVideo({ videoId, src }: { videoId?: string; src?: string }) {
   return (
     <div className="bg-foreground py-12 px-4 border-b-4 border-primary">
       <div className="container mx-auto max-w-4xl">
@@ -10,6 +10,13 @@ export function PrivateEventVideo({ videoId }: { videoId?: string }) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
+            />
+          ) : src ? (
+            <video
+              src={src}
+              controls
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-foreground/95 text-background/40 text-center px-8">
