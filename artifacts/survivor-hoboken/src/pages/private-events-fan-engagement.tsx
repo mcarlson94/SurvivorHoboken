@@ -53,11 +53,10 @@ export default function FanEngagement() {
     return () => { document.body.removeChild(script); };
   }, []);
 
-  usePageMeta({
-    title: "Live Survivor Challenges for Survivor Night Events | Fan Engagement | Survivor Hoboken",
-    description:
-      "Elevate your Survivor Night or fan engagement event with real, life-size Survivor challenges. We bring authentic immunity challenges to stadiums, arenas, and festivals nationwide — giving fans a live Survivor experience right on the concourse.",
-  });
+  usePageMeta(
+    "Live Survivor Challenges for Survivor Night Events | Fan Engagement | Survivor Hoboken",
+    "Elevate your Survivor Night or fan engagement event with real, life-size Survivor challenges. We bring authentic immunity challenges to stadiums, arenas, and festivals nationwide — giving fans a live Survivor experience right on the concourse."
+  );
 
   return (
     <div className="w-full pt-16 md:pt-20">
