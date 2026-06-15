@@ -1,8 +1,19 @@
-export function PrivateEventVideo({ videoId, src }: { videoId?: string; src?: string }) {
+export function PrivateEventVideo({
+  videoId,
+  src,
+  portrait = false,
+}: {
+  videoId?: string;
+  src?: string;
+  portrait?: boolean;
+}) {
   return (
     <div className="bg-foreground py-12 px-4 border-b-4 border-primary">
-      <div className="container mx-auto max-w-4xl">
-        <div className="relative w-full aspect-video border-4 border-primary overflow-hidden">
+      <div className={`mx-auto ${portrait ? "max-w-sm" : "container max-w-4xl"}`}>
+        <div
+          className="relative w-full border-4 border-primary overflow-hidden"
+          style={{ aspectRatio: portrait ? "9/16" : "16/9" }}
+        >
           {videoId ? (
             <iframe
               src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
@@ -14,8 +25,11 @@ export function PrivateEventVideo({ videoId, src }: { videoId?: string; src?: st
           ) : src ? (
             <video
               src={src}
-              controls
+              autoPlay
+              muted
+              loop
               playsInline
+              controls
               className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (

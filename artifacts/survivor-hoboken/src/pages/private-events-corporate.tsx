@@ -99,7 +99,7 @@ export default function CorporateEvents() {
         </div>
       </div>
 
-      <PrivateEventVideo src="/videos/corporate-event.mov" />
+      <PrivateEventVideo src="/videos/corporate-event.mov" portrait />
 
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
