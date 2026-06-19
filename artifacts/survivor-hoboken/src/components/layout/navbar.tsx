@@ -12,7 +12,7 @@ const links = [
   { href: "/season-recaps", label: "Season Recaps" },
 ];
 
-const APPLY_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfAVG1NEsjl69NL5jo6Y9sGMXXhxXXSqXvpjker7g8chpQElg/viewform?usp=header";
+const APPLY_LINK = "https://docs.google.com/forms/d/1wek1-9UAW-ltSI4urMoPRO6hy5YlLFnc37yilw5Is-M/viewform";
 
 export function Navbar() {
   const [location] = useLocation();
