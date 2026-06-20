@@ -89,7 +89,7 @@ export default function BachelorParties() {
         </div>
       </div>
 
-      <PrivateEventVideo src="/videos/corporate-event.mov" portrait />
+      <PrivateEventVideo src="/videos/corporate-event.mp4" portrait />
 
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
