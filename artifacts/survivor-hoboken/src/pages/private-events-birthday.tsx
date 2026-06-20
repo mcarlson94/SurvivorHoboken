@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider } from "@/components/reviews-slider";
@@ -48,10 +48,11 @@ const faqs = [
 ];
 
 export default function BirthdayParties() {
-  usePageMeta(
-    "Survivor Birthday Party in NJ & NYC - Survivor Hoboken",
-    "Authentic Survivor birthday parties in NYC & NJ with Jeff Probst-style hosting. Real immunity challenges, tribal councils, strategic gameplay."
-  );
+  useSEO({
+    title: "Survivor Birthday Party | Survivor Hoboken",
+    description: "Throw a Survivor-themed birthday party in NYC or NJ. Custom challenges, a tribal council, and a host who runs the whole game for you.",
+    canonical: "https://survivorhoboken.com/private-events/birthday/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

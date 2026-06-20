@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { Link } from "wouter";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 
 const APPLY_LINK = "https://docs.google.com/forms/d/1wek1-9UAW-ltSI4urMoPRO6hy5YlLFnc37yilw5Is-M/viewform";
 
@@ -25,7 +25,7 @@ const TILES = [
     alt: "Survivor Hoboken host reading votes Jeff Probst-style at a live tribal council",
     title: "Jeff Probst-Style Hosting",
     body: "Professionally hosted, Jeff-Probst-style, with tribal councils and real stakes.",
-    href: "/about",
+    href: "/about-us",
   },
   {
     image: "/images/survivor-hoboken-group-park.webp",
@@ -257,10 +257,11 @@ function TestimonialCarousel() {
 }
 
 export default function Home() {
-  usePageMeta(
-    "Survivor Hoboken | Live Survivor Games & Private Events in NJ & NYC",
-    "Survivor Hoboken runs live, multi-season Survivor games and brings custom Survivor experiences to private events, corporate teams, and celebrations across the NYC & NJ metro area."
-  );
+  useSEO({
+    title: "Survivor Hoboken | Real Survivor Games & Private Events",
+    description: "Play a real Survivor game in Hoboken & NYC, or book a private Survivor experience for your team, party, or event. No cameras, all the strategy.",
+    canonical: "https://survivorhoboken.com/",
+  });
 
   return (
     <div className="w-full bg-background">

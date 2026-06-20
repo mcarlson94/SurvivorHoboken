@@ -1,0 +1,195 @@
+# Replit Prompt: SEO Migration + Build — Survivor Hoboken (v3)
+
+> Paste everything below the line into Replit's agent. Every instruction is directive — apply it as written. Titles and meta descriptions are provided exactly; do not rewrite them. Grounded in 16 months of real Google Search Console data.
+
+---
+
+You are finishing and SEO-optimizing survivorhoboken.com, a live business site being rebuilt on a new stack. It has established Google rankings (a #1 result for "hire a jeff probst nj", ~12,900 monthly impressions on the rule book, strong branded traffic). Your job is to preserve that search equity and ship clean on-page SEO. Follow every section below.
+
+## 0. Hard rules
+
+1. **Canonical domain is the bare domain `https://survivorhoboken.com` (no www).** Every canonical tag, sitemap entry, internal link, and Open Graph URL uses the bare domain. Never output a `www.` URL anywhere.
+2. **Every page must be server-rendered or statically generated (SSR/SSG), never client-side-only.** Full text, `<title>`, `<meta>` description, headings, and JSON-LD must be in the initial HTML before JS runs. `view-source` on every page must show real content. A blank shell that paints via JavaScript will not index and is a failure.
+3. **Set `trailingSlash: true` site-wide.** Every indexed URL ends in `/`; this makes unchanged pages match with zero redirects.
+
+## 1. URL plan
+
+**A. Rename these routes to match the old indexed URLs (just rename, NO redirect):**
+- `/about` → `/about-us/`
+- `/season-1` → `/season-1-recap/`
+- `/season-2` → `/season-2-recap/`
+- `/season-3` → `/season-3-recap/`
+
+**B. These already match once trailing slashes are on:** `/` · `/rule-book/` · `/private-events/` · `/challenges/`
+
+**C. Build these two missing pages (see Section 2):** `/meet-the-players/` · `/olivia-marcus-survivor-hoboken/`
+
+**D. Recreate at these exact URLs:** `/contact/` (contact + booking form) · `/terms-conditions/` (legal)
+
+**E. Brand-new pages, keep as built:** `/private-events/bachelor/` · `/private-events/private-games/` · `/private-events/fan-engagement/` · `/season-recaps/` · `/season-4/`
+
+**F. The only 301 redirects to create** (in `next.config.js` `redirects()` or `_redirects`, all permanent):
+- `/survivor-birthday-party/` → `/private-events/birthday/`
+- `/private-events-corporate-team-building/` → `/private-events/corporate/`
+- `/szn1-recap/` → `/season-1-recap/`
+- `/category/events/` → `/private-events/`
+- `/category/season-recaps/` → `/season-recaps/`
+- `/schedule/` → `/`
+
+**G. Set `noindex` and exclude from the sitemap:** `/one-day-game-516/` (direct-link only; works via link, never appears in Google).
+
+## 2. The two hidden pages
+
+Build `/meet-the-players/` and `/olivia-marcus-survivor-hoboken/` so they are findable in Google but NOT by browsing the site:
+- Fully indexable (no `noindex`, no robots disallow).
+- **Include both in `sitemap.xml`.**
+- **Do NOT link to them from anywhere on the site** — not the header, footer, mobile menu, or any other page. The sitemap is their only discovery path.
+- Give each substantial server-rendered text (not a stub).
+- `/olivia-marcus-survivor-hoboken/` is built per the separate "Olivia Marcus Page" build spec (9 Instagram reels + lazy-load). Use the title/meta in Section 3.
+- `/meet-the-players/` is a cast overview: short intro + brief profiles of notable players across seasons.
+
+## 3. Exact titles and meta descriptions — apply verbatim
+
+For every page set the `<title>` and `<meta name="description">` exactly as below. One `<h1>` per page using the page's main keyword. Follow the content note.
+
+**`/` — Home**
+- Title: `Survivor Hoboken | Real Survivor Games & Private Events`
+- Meta: `Play a real Survivor game in Hoboken & NYC, or book a private Survivor experience for your team, party, or event. No cameras, all the strategy.`
+- Content: brand hub; clear links to "play a season" and "book a private event."
+
+**`/about-us/`**
+- Title: `About Survivor Hoboken | Meet the Host`
+- Meta: `The story behind Survivor Hoboken and the host who runs the game. How a local Survivor competition and private events came to be.`
+- Content: founder/host story, credibility, press. `Organization` JSON-LD.
+
+**`/challenges/`**
+- Title: `Survivor Challenges | Survivor Hoboken`
+- Meta: `See the immunity challenges, puzzles, and physical tests we run at Survivor Hoboken games and private events. Get a feel for what you'll play.`
+- Content: showcase challenge types; link to `/private-events/`.
+
+**`/rule-book/`**
+- Title: `Survivor Rule Book: Ties, Revotes & Tribal Council`
+- Meta: `How Survivor handles a tie at tribal council, revotes, and tiebreakers — plus the full Survivor Hoboken rule book and every twist explained.`
+- Content: highest-impression page. Keep/expand the informational content. Add a tasteful CTA banner + internal links pushing this traffic to `/private-events/`. Add `FAQPage` JSON-LD for the tie/revote/tiebreaker questions.
+
+**`/private-events/`**
+- Title: `Private Survivor Events in NYC & NJ | Survivor Hoboken`
+- Meta: `Book a private Survivor experience in NYC or NJ for team building, birthdays, and parties. Real challenges, a real host, unforgettable.`
+- Content: top revenue page. Strong commercial copy, what's included, testimonials, prominent quote/booking CTA. `Service` + `LocalBusiness` JSON-LD.
+
+**`/private-events/corporate/`**
+- Title: `Survivor Corporate Team Building | NYC & NJ`
+- Meta: `Run a real Survivor game with your team. Corporate team building in NYC & NJ with challenges, tribal councils, and a pro host. Get a quote.`
+- Content: expand depth substantially (corporate framing, group sizes, logistics, sample agenda, corporate testimonials). Big ranking upside. Link from `/private-events/` and `/`.
+
+**`/private-events/birthday/`**
+- Title: `Survivor Birthday Party | Survivor Hoboken`
+- Meta: `Throw a Survivor-themed birthday party in NYC or NJ. Custom challenges, a tribal council, and a host who runs the whole game for you.`
+- Content: packages, age ranges, what's included, gallery, booking CTA.
+
+**`/private-events/bachelor/`**
+- Title: `Survivor Bachelor & Bachelorette Parties | NYC & NJ`
+- Meta: `Make your bachelor or bachelorette party a real Survivor showdown. Challenges, twists, and a pro host across NYC and NJ.`
+- Content: party packages, group sizes, booking CTA.
+
+**`/private-events/private-games/`**
+- Title: `Private Survivor Games | Survivor Hoboken`
+- Meta: `Gather your crew for a private Survivor game. Custom-built challenges and tribal councils run by a pro host in NYC & NJ.`
+- Content: explain the private-game format; booking CTA.
+
+**`/private-events/fan-engagement/`**
+- Title: `Survivor Fan Activations & Events | Survivor Hoboken`
+- Meta: `Bring a live Survivor activation to your venue, brand, or fan event. Challenges and tribal councils built for crowds, run by a pro host.`
+- Content: activations for venues/brands/fan events; inquiry CTA.
+
+**`/season-recaps/`**
+- Title: `Survivor Hoboken Season Recaps`
+- Meta: `Catch up on every Survivor Hoboken season — recaps of the challenges, blindsides, and winners from each game.`
+- Content: landing page linking to each season recap.
+
+**`/season-1-recap/`**
+- Title: `Survivor Hoboken Season 1 Recap`
+- Meta: `The full Survivor Hoboken Season 1 recap — challenges, tribal councils, blindsides, and how the first sole survivor was crowned.`
+
+**`/season-2-recap/`**
+- Title: `Survivor Hoboken Season 2 Recap`
+- Meta: `The full Survivor Hoboken Season 2 recap — every challenge, vote, and twist on the way to the winner.`
+
+**`/season-3-recap/`**
+- Title: `Survivor Hoboken Season 3 Recap`
+- Meta: `The full Survivor Hoboken Season 3 recap — challenges, alliances, blindsides, and the sole survivor.`
+
+**`/season-4/`**
+- Title: `Survivor Hoboken Season 4 Recap`
+- Meta: `The full Survivor Hoboken Season 4 recap — challenges, tribal councils, and the season's winner.`
+
+**`/contact/`**
+- Title: `Contact Survivor Hoboken`
+- Meta: `Get in touch with Survivor Hoboken to book a private event, join a season, or ask a question. Serving Hoboken, NYC, and NJ.`
+- Content: contact details + booking/quote form.
+
+**`/terms-conditions/`**
+- Title: `Terms & Conditions | Survivor Hoboken`
+- Meta: `The terms and conditions for participating in Survivor Hoboken games and private events.`
+
+**`/meet-the-players/`** (hidden)
+- Title: `Meet the Players | Survivor Hoboken Cast`
+- Meta: `Meet the players who've competed across Survivor Hoboken seasons — the strategists, underdogs, and winners of the game.`
+
+**`/olivia-marcus-survivor-hoboken/`** (hidden)
+- Title: `Olivia Marcus — Survivor Hoboken Journey & Vlogs`
+- Meta: `Follow Olivia Marcus (@oliviamarcus) through her Survivor Hoboken journey — watch all her reels and vlogs from the challenges, twists, and tribal councils.`
+
+## 4. sitemap.xml
+
+Generate `sitemap.xml` at the site root, bare-domain URLs with trailing slashes. **Include exactly these:**
+
+```
+https://survivorhoboken.com/
+https://survivorhoboken.com/about-us/
+https://survivorhoboken.com/challenges/
+https://survivorhoboken.com/rule-book/
+https://survivorhoboken.com/private-events/
+https://survivorhoboken.com/private-events/corporate/
+https://survivorhoboken.com/private-events/birthday/
+https://survivorhoboken.com/private-events/bachelor/
+https://survivorhoboken.com/private-events/private-games/
+https://survivorhoboken.com/private-events/fan-engagement/
+https://survivorhoboken.com/season-recaps/
+https://survivorhoboken.com/season-1-recap/
+https://survivorhoboken.com/season-2-recap/
+https://survivorhoboken.com/season-3-recap/
+https://survivorhoboken.com/season-4/
+https://survivorhoboken.com/contact/
+https://survivorhoboken.com/terms-conditions/
+https://survivorhoboken.com/meet-the-players/
+https://survivorhoboken.com/olivia-marcus-survivor-hoboken/
+```
+
+**Exclude** `/one-day-game-516/` and any old/renamed/redirected URLs.
+
+## 5. Technical SEO (apply to every page)
+
+- **Canonical:** `<link rel="canonical" href="https://survivorhoboken.com{path}/">` — bare domain, trailing slash, self-referencing.
+- **robots.txt:** allow crawling, add `Sitemap: https://survivorhoboken.com/sitemap.xml`, block nothing important.
+- **JSON-LD:** `Organization` + `LocalBusiness` sitewide; `Service` on `/private-events/` and its children; `FAQPage` on `/rule-book/`; `Person` on the player pages.
+- **Open Graph + Twitter cards** on every page (title, description, image, bare-domain URL).
+- **Semantic HTML:** one `<h1>` per page, correct heading order, descriptive link text.
+- **Images:** descriptive `alt`, lazy-load, WebP/AVIF, explicit width/height, compressed.
+- **Internal linking:** crawlable header + footer nav; link the money pages from the homepage; link `/rule-book/` into `/private-events/`. The two hidden pages stay out of all nav (Section 2).
+- **Mobile-first & Core Web Vitals:** 75% of traffic is mobile. Pass LCP, CLS, INP. Minimize and defer JS, fast TTFB.
+- **HTTPS only, no mixed content. Preserve the existing Google site-verification and Google Analytics.**
+
+## 6. Self-check — report status on each
+
+1. `/about-us/`, `/season-1-recap/`, `/season-2-recap/`, `/season-3-recap/` resolve at those exact paths (renamed, not redirected).
+2. `/`, `/rule-book/`, `/private-events/`, `/challenges/` resolve with trailing slashes, no redirect.
+3. `/meet-the-players/` and `/olivia-marcus-survivor-hoboken/` exist with real content, are indexable, ARE in `sitemap.xml`, and are linked from NO page.
+4. `/one-day-game-516/` is `noindex` and NOT in the sitemap.
+5. All six 301 redirects work and land on a real page (no soft 404s).
+6. Every page's `<title>` and meta description match Section 3 exactly.
+7. `view-source` on every page shows real content + title + meta + JSON-LD (SSR/SSG confirmed).
+8. Every canonical, OG tag, sitemap entry, and internal link uses the bare domain with a trailing slash; none point to `www.`.
+9. Mobile Lighthouse SEO and Performance scores are 90+.
+
+Output a short report of what changed, the final route list, the redirect map, and any check above that did not pass.

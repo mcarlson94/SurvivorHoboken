@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function About() {
+  useSEO({
+    title: "About Survivor Hoboken | Meet the Host",
+    description: "The story behind Survivor Hoboken and the host who runs the game. How a local Survivor competition and private events came to be.",
+    canonical: "https://survivorhoboken.com/about-us/",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Survivor Hoboken",
+      "url": "https://survivorhoboken.com",
+      "founder": { "@type": "Person", "name": "Matt Carlson" },
+      "description": "Survivor Hoboken designs and produces Survivor-style games and private events across the NYC & NJ metro area.",
+    },
+  });
   return (
     <div className="w-full pt-16 md:pt-20">
       <div className="bg-foreground text-background py-20 px-4 border-b-4 border-primary">

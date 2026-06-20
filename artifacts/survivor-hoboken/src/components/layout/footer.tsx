@@ -43,10 +43,12 @@ export function Footer() {
               <div>
                 <h3 className="font-heading text-xl mb-4">Quick Links</h3>
                 <ul className="flex flex-col gap-3 font-bold uppercase tracking-wider text-sm">
-                  <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                  <li><Link href="/about-us" className="hover:text-primary transition-colors">About Us</Link></li>
                   <li><Link href="/challenges" className="hover:text-primary transition-colors">Challenges</Link></li>
                   <li><Link href="/rule-book" className="hover:text-primary transition-colors">Rule Book</Link></li>
                   <li><Link href="/season-recaps" className="hover:text-primary transition-colors">Season Recaps</Link></li>
+                  <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                  <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms &amp; Conditions</Link></li>
                 </ul>
               </div>
 

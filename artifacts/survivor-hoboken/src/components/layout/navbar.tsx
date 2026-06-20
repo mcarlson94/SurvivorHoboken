@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const links = [
-  { href: "/about", label: "About Us" },
+  { href: "/about-us", label: "About Us" },
   { href: "/challenges", label: "Challenges" },
   { href: "/rule-book", label: "Rule Book" },
   { href: "/private-events", label: "Private Events" },

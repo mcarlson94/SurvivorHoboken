@@ -6,79 +6,89 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/about</loc>
+    <loc>https://survivorhoboken.com/about-us/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/challenges</loc>
+    <loc>https://survivorhoboken.com/challenges/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/rule-book</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://survivorhoboken.com/private-events</loc>
+    <loc>https://survivorhoboken.com/rule-book/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/private-events/corporate</loc>
+    <loc>https://survivorhoboken.com/private-events/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/private-events/birthday</loc>
+    <loc>https://survivorhoboken.com/private-events/corporate/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://survivorhoboken.com/private-events/birthday/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/private-events/bachelor</loc>
+    <loc>https://survivorhoboken.com/private-events/bachelor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/private-events/private-games</loc>
+    <loc>https://survivorhoboken.com/private-events/private-games/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/private-events/fan-engagement</loc>
+    <loc>https://survivorhoboken.com/private-events/fan-engagement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/season-recaps</loc>
+    <loc>https://survivorhoboken.com/season-recaps/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/season-1</loc>
+    <loc>https://survivorhoboken.com/season-1-recap/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/season-2</loc>
+    <loc>https://survivorhoboken.com/season-2-recap/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/season-3</loc>
+    <loc>https://survivorhoboken.com/season-3-recap/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/season-4</loc>
+    <loc>https://survivorhoboken.com/season-4/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://survivorhoboken.com/one-day-game-516</loc>
+    <loc>https://survivorhoboken.com/contact/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://survivorhoboken.com/terms-conditions/</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://survivorhoboken.com/meet-the-players/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://survivorhoboken.com/olivia-marcus-survivor-hoboken/</loc>

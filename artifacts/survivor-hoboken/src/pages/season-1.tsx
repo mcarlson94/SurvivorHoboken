@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Season1() {
+  useSEO({
+    title: "Survivor Hoboken Season 1 Recap",
+    description: "The full Survivor Hoboken Season 1 recap — challenges, tribal councils, blindsides, and how the first sole survivor was crowned.",
+    canonical: "https://survivorhoboken.com/season-1-recap/",
+  });
+
   useEffect(() => {
     if ((window as any).instgrm) {
       (window as any).instgrm.Embeds.process();

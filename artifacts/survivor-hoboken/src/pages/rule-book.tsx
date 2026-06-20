@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/use-seo";
 
 const sections = [
   {
@@ -149,6 +150,41 @@ const sections = [
 ];
 
 export default function RuleBook() {
+  useSEO({
+    title: "Survivor Rule Book: Ties, Revotes & Tribal Council",
+    description: "How Survivor handles a tie at tribal council, revotes, and tiebreakers — plus the full Survivor Hoboken rule book and every twist explained.",
+    canonical: "https://survivorhoboken.com/rule-book/",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happens when there is a tie at Survivor tribal council?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When there is a tie at tribal council, the tied players are safe and cannot vote. All other players must revote between only the tied players."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the revote is also a tie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If the revote results in another tie, the remaining players must reach a unanimous decision. If no unanimous decision is reached, a tiebreaker challenge is held."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Shot in the Dark work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any player can play their Shot in the Dark before the vote. They give up their vote and roll a die — a 6 makes them safe from that tribal council."
+          }
+        }
+      ]
+    },
+  });
   return (
     <div className="w-full pt-16 md:pt-20 bg-background min-h-screen">
       {/* Hero */}

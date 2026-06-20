@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { useEffect } from "react";
 
@@ -53,10 +53,11 @@ export default function FanEngagement() {
     return () => { document.body.removeChild(script); };
   }, []);
 
-  usePageMeta(
-    "Live Survivor Challenges for Survivor Night Events | Fan Engagement | Survivor Hoboken",
-    "Elevate your Survivor Night or fan engagement event with real, life-size Survivor challenges. We bring authentic immunity challenges to stadiums, arenas, and festivals nationwide — giving fans a live Survivor experience right on the concourse."
-  );
+  useSEO({
+    title: "Survivor Fan Activations & Events | Survivor Hoboken",
+    description: "Bring a live Survivor activation to your venue, brand, or fan event. Challenges and tribal councils built for crowds, run by a pro host.",
+    canonical: "https://survivorhoboken.com/private-events/fan-engagement/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

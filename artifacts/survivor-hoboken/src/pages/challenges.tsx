@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 
 const challenges = [
   {
@@ -121,10 +121,11 @@ function BookingSection() {
 }
 
 export default function Challenges() {
-  usePageMeta(
-    "Survivor Challenges for Events | Survivor Hoboken",
-    "Real, custom-built Survivor immunity challenges we run across our live seasons: balance, puzzle, endurance, and team challenges for events in the NYC & NJ metro area."
-  );
+  useSEO({
+    title: "Survivor Challenges | Survivor Hoboken",
+    description: "See the immunity challenges, puzzles, and physical tests we run at Survivor Hoboken games and private events. Get a feel for what you'll play.",
+    canonical: "https://survivorhoboken.com/challenges/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

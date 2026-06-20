@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider } from "@/components/reviews-slider";
@@ -48,10 +48,11 @@ const faqs = [
 ];
 
 export default function BachelorParties() {
-  usePageMeta(
-    "Survivor Bachelor & Bachelorette Party NJ & NYC - Survivor Hoboken",
-    "The ultimate showdown before the big day. Survivor-style bachelor and bachelorette parties in NJ & NYC with real challenges, tribal councils, and professional hosting."
-  );
+  useSEO({
+    title: "Survivor Bachelor & Bachelorette Parties | NYC & NJ",
+    description: "Make your bachelor or bachelorette party a real Survivor showdown. Challenges, twists, and a pro host across NYC and NJ.",
+    canonical: "https://survivorhoboken.com/private-events/bachelor/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

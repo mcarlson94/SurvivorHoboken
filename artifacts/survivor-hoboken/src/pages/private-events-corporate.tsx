@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider } from "@/components/reviews-slider";
@@ -58,10 +58,11 @@ const perfectFor = [
 ];
 
 export default function CorporateEvents() {
-  usePageMeta(
-    "Survivor Corporate Team Building NJ & NYC - Survivor Hoboken",
-    "Survivor-style corporate team building in NYC, NJ & Central Jersey. Professional host, real challenges, team competition. Book your event today."
-  );
+  useSEO({
+    title: "Survivor Corporate Team Building | NYC & NJ",
+    description: "Run a real Survivor game with your team. Corporate team building in NYC & NJ with challenges, tribal councils, and a pro host. Get a quote.",
+    canonical: "https://survivorhoboken.com/private-events/corporate/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

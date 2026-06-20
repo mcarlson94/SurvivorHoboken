@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
+import { useSEO } from "@/hooks/use-seo";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider } from "@/components/reviews-slider";
 
@@ -43,6 +44,24 @@ const eventTypes = [
 ];
 
 export default function PrivateEvents() {
+  useSEO({
+    title: "Private Survivor Events in NYC & NJ | Survivor Hoboken",
+    description: "Book a private Survivor experience in NYC or NJ for team building, birthdays, and parties. Real challenges, a real host, unforgettable.",
+    canonical: "https://survivorhoboken.com/private-events/",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Private Survivor Events",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Survivor Hoboken",
+        "url": "https://survivorhoboken.com",
+        "areaServed": ["Hoboken, NJ", "New York, NY", "New Jersey"],
+      },
+      "description": "Custom Survivor-style private events including corporate team building, birthday parties, bachelor parties, and private games.",
+      "url": "https://survivorhoboken.com/private-events/",
+    },
+  });
   return (
     <div className="w-full pt-16 md:pt-20">
       <div className="bg-secondary text-secondary-foreground py-24 px-4 border-b-4 border-foreground relative overflow-hidden">

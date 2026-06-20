@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Season2() {
+  useSEO({
+    title: "Survivor Hoboken Season 2 Recap",
+    description: "The full Survivor Hoboken Season 2 recap — every challenge, vote, and twist on the way to the winner.",
+    canonical: "https://survivorhoboken.com/season-2-recap/",
+  });
+
   useEffect(() => {
     if ((window as any).instgrm) {
       (window as any).instgrm.Embeds.process();

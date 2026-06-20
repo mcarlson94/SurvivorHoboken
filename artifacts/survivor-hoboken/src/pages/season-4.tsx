@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Season4() {
+  useSEO({
+    title: "Survivor Hoboken Season 4 Recap",
+    description: "The full Survivor Hoboken Season 4 recap — challenges, tribal councils, and the season's winner.",
+    canonical: "https://survivorhoboken.com/season-4/",
+  });
+
   useEffect(() => {
     if ((window as any).instgrm) {
       (window as any).instgrm.Embeds.process();

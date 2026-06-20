@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function OneDayGame516() {
+  useSEO({
+    title: "Survivor Hoboken One Day Game — May 16, 2026",
+    description: "Recap of the first-ever one-day Survivor Hoboken game. 15 players, one day, one Sole Survivor.",
+    noindex: true,
+  });
+
   useEffect(() => {
     if ((window as any).instgrm) {
       (window as any).instgrm.Embeds.process();

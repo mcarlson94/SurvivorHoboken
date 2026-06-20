@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
-import { usePageMeta } from "@/hooks/use-page-meta";
+import { useSEO } from "@/hooks/use-seo";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider, type Review } from "@/components/reviews-slider";
 
@@ -95,10 +95,11 @@ const faqs = [
 ];
 
 export default function PrivateGames() {
-  usePageMeta(
-    "Private Survivor Games – Weekend Getaways & Reunions | Survivor Hoboken",
-    "Turn your weekend getaway, friend trip, or reunion into the ultimate Survivor experience. Real challenges, tribal councils, and professional hosting."
-  );
+  useSEO({
+    title: "Private Survivor Games | Survivor Hoboken",
+    description: "Gather your crew for a private Survivor game. Custom-built challenges and tribal councils run by a pro host in NYC & NJ.",
+    canonical: "https://survivorhoboken.com/private-events/private-games/",
+  });
 
   return (
     <div className="w-full pt-16 md:pt-20">

@@ -1,8 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function Season3() {
+  useSEO({
+    title: "Survivor Hoboken Season 3 Recap",
+    description: "The full Survivor Hoboken Season 3 recap — challenges, alliances, blindsides, and the sole survivor.",
+    canonical: "https://survivorhoboken.com/season-3-recap/",
+  });
+
   useEffect(() => {
     if ((window as any).instgrm) {
       (window as any).instgrm.Embeds.process();

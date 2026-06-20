@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/use-seo";
 
 export default function SeasonRecaps() {
+  useSEO({
+    title: "Survivor Hoboken Season Recaps",
+    description: "Catch up on every Survivor Hoboken season — recaps of the challenges, blindsides, and winners from each game.",
+    canonical: "https://survivorhoboken.com/season-recaps/",
+  });
+
   const seasons = [
     {
       id: "ONE DAY 5/16/26",
@@ -28,7 +35,7 @@ export default function SeasonRecaps() {
       image: "/images/lj-ruiz.jpeg",
       title: "Sole Survivor: LJ Ruiz",
       desc: "14 players from Hoboken, Jersey City, and Weehawken competed September 8th–14th in an intense battle of alliances and blindsides.",
-      href: "/season-3",
+      href: "/season-3-recap",
     },
     {
       id: "SZN 2",
@@ -37,7 +44,7 @@ export default function SeasonRecaps() {
       image: "/images/danny-kaplin.png",
       title: "Sole Survivor: Danny Kaplin",
       desc: "15 players, 3 tribes, the first-ever Auction, and the Shot In The Dark — all in the heat of the summer.",
-      href: "/season-2",
+      href: "/season-2-recap",
     },
     {
       id: "SZN 1",
@@ -46,7 +53,7 @@ export default function SeasonRecaps() {
       image: "/images/john-cordone.png",
       title: "Sole Survivor: John Cordone",
       desc: "The inaugural season that started it all — 12 strangers from Hoboken and Jersey City competing for the very first time.",
-      href: "/season-1",
+      href: "/season-1-recap",
     },
   ];
 
