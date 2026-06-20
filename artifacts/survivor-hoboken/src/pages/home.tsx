@@ -306,7 +306,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="bg-primary text-white font-heading uppercase px-8 py-4 text-base rounded hover:opacity-90 transition-opacity text-center"
             >
-              Apply To Play (Rolling Application)
+              Apply To Play (SZN 5 7/20 - 7/26)
             </a>
           </div>
 
