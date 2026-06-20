@@ -23,6 +23,7 @@ import Season2 from "@/pages/season-2";
 import Season3 from "@/pages/season-3";
 import Season4 from "@/pages/season-4";
 import OneDayGame516 from "@/pages/one-day-game-516";
+import OliviaMarcus from "@/pages/olivia-marcus";
 
 
 const queryClient = new QueryClient();
@@ -56,6 +57,7 @@ function Router() {
       <Route path="/season-3" component={Season3} />
       <Route path="/season-4" component={Season4} />
       <Route path="/one-day-game-516" component={OneDayGame516} />
+      <Route path="/olivia-marcus-survivor-hoboken" component={OliviaMarcus} />
       <Route component={NotFound} />
     </Switch>
     </>

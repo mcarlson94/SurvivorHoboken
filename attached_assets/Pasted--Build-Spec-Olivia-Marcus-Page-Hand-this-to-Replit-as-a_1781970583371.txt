@@ -1,0 +1,91 @@
+# Build Spec: Olivia Marcus Page
+
+> Hand this to Replit as a focused build task. It implements Section 2C of the main SEO prompt: the hidden-but-indexed `/olivia-marcus-survivor-hoboken/` page. Keep it in `sitemap.xml`, keep it OUT of all site navigation/menus.
+
+## Page identity
+
+- **URL:** `/olivia-marcus-survivor-hoboken/` (trailing slash, bare-domain canonical)
+- **Title tag:** `Olivia Marcus — Survivor Hoboken Journey & Vlogs`
+- **Meta description:** `Follow Olivia Marcus (@oliviamarcus) through her Survivor Hoboken journey — watch all her reels and vlogs from the challenges, twists, and tribal councils.`
+- **Primary keywords:** olivia survivor, olivia marcus survivor hoboken, marcus survivor, olivia vlog, olivia marcus latest
+- **Indexable:** YES (no noindex). **Include in sitemap.xml.** **Do NOT link from any nav, footer, or menu.**
+
+## Written copy (server-rendered as real HTML text — this is what ranks, not the embeds)
+
+**H1:** `Olivia Marcus's Survivor Hoboken Journey`
+
+**Intro paragraph (place above the reels):**
+> Content creator Olivia Marcus (@oliviamarcus) brought her followers along for every step of her Survivor Hoboken experience, documenting the entire journey on Instagram. From the opening challenge to the final stretch, she captured the strategy, the blindsides, the tribal councils, and the friendships that make Survivor Hoboken what it is. Below is her full series of reels in order — watch her run from the first vote to the last. [Optional, add if accurate: a sentence on her season number and how far she made it.]
+
+**Closing block (after the reels) — internal links OUT are encouraged (only inbound nav links are forbidden):**
+> Olivia's run is one of dozens of stories that come out of every Survivor Hoboken season. Want in? [Join an upcoming season](/) or [book your own private Survivor experience](/private-events/) for your team, birthday, or crew.
+
+## The nine reels — embed in THIS order
+
+Each reel is a `@oliviamarcus` Instagram Reel. Render each as an `instagram-media` blockquote using its permalink, and give each a short one-line text caption above or below it (a real `<p>`, good for SEO and accessibility — Matt can fill the specifics since he knows each clip):
+
+1. `https://www.instagram.com/reel/DICJ3M6u_zZ/`
+2. `https://www.instagram.com/reel/DIE9kLxRY6x/`
+3. `https://www.instagram.com/reel/DIFyOf9txnO/`
+4. `https://www.instagram.com/reel/DIHJETwOs2H/`
+5. `https://www.instagram.com/reel/DIISigctiaw/`
+6. `https://www.instagram.com/reel/DIJos90OlaG/`
+7. `https://www.instagram.com/reel/DIKzxkktvgl/`
+8. `https://www.instagram.com/reel/DIMG0WxuyIj/`
+9. `https://www.instagram.com/reel/DJecupUtt6X/`
+
+Caption pattern (editable): `Part 1 — [one line on what happens in this clip]`, `Part 2 — …`, etc. Even short captions add indexable text and keep the page from being thin.
+
+## Performance: lazy-load the embeds (do NOT load 9 embeds on page load)
+
+Nine Instagram embeds loaded at once will wreck mobile LCP and cause layout shift. Required approach:
+
+1. Server-render a lightweight blockquote for each reel (small HTML, no script):
+   ```html
+   <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DICJ3M6u_zZ/" data-instgrm-version="14" style="min-height:540px;"></blockquote>
+   ```
+   The inline `min-height` reserves space so there's no layout shift (CLS) when the embed hydrates.
+
+2. Load Instagram's `embed.js` **once, lazily**, only when the reel gallery scrolls into view, then process the embeds. In a Next.js App Router app, put this in a small `'use client'` component:
+   ```jsx
+   'use client';
+   import { useEffect, useRef } from 'react';
+
+   export default function InstagramGalleryLoader() {
+     const ref = useRef(null);
+     useEffect(() => {
+       const el = ref.current;
+       if (!el) return;
+       const load = () => {
+         if (window.instgrm) { window.instgrm.Embeds.process(); return; }
+         const s = document.createElement('script');
+         s.src = 'https://www.instagram.com/embed.js';
+         s.async = true;
+         s.onload = () => window.instgrm && window.instgrm.Embeds.process();
+         document.body.appendChild(s);
+       };
+       const io = new IntersectionObserver((entries) => {
+         if (entries.some(e => e.isIntersecting)) { load(); io.disconnect(); }
+       }, { rootMargin: '300px' });
+       io.observe(el);
+       return () => io.disconnect();
+     }, []);
+     return <div ref={ref} aria-hidden="true" />;
+   }
+   ```
+   Render `<InstagramGalleryLoader />` near the gallery. The blockquotes themselves stay in the server-rendered HTML; only the script that turns them into players loads on scroll.
+
+3. If you'd rather go even lighter, use a click-to-load facade: show a thumbnail/play-button card per reel and only inject embed.js + process on click. Either is fine; the IntersectionObserver version above is the simpler default.
+
+## SEO / technical requirements
+
+- Real intro + per-clip captions in the server-rendered HTML (proves on `view-source`). The embeds are enhancement, not the indexable content.
+- Self-referencing canonical: `https://survivorhoboken.com/olivia-marcus-survivor-hoboken/`.
+- JSON-LD: `Person` for Olivia Marcus (name + `sameAs` her Instagram `https://www.instagram.com/oliviamarcus/`), optionally wrapped in an `Article`/`CollectionPage`. (Skip `VideoObject` — the videos are third-party Instagram embeds, so Google generally won't credit them to your page.)
+- Open Graph + Twitter card with title, description, bare-domain URL, and a representative image.
+- Add the page to `sitemap.xml`; do NOT add it to header, footer, or mobile nav.
+- Lazy-load any images, set explicit dimensions, compress.
+
+## Reuse
+
+This whole pattern (server-rendered copy + captions + lazy-loaded embeds, hidden from nav but in the sitemap) is the template for any future player/influencer page. When the next creator documents a season, clone this page at `/{their-name}-survivor-hoboken/` and swap the copy and reel list.
