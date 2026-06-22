@@ -136,8 +136,8 @@ export default function PrivateEvents() {
             ))}
           </div>
 
-          <div className="mt-20 bg-card border-4 border-foreground p-8 md:p-12 brutal-shadow relative">
-            <div className="absolute -top-6 right-8 bg-primary text-white font-heading text-3xl px-6 py-2 brutal-shadow transform rotate-2">
+          <div className="mt-16 md:mt-20 bg-card border-4 border-foreground p-8 md:p-12 brutal-shadow relative">
+            <div className="absolute -top-5 right-4 md:right-8 bg-primary text-white font-heading text-base md:text-3xl px-3 py-1 md:px-6 md:py-2 brutal-shadow transform rotate-2 whitespace-nowrap">
               WHAT'S INCLUDED
             </div>
             <ul className="space-y-6 mt-8">
