@@ -258,8 +258,8 @@ function TestimonialCarousel() {
 
 export default function Home() {
   useSEO({
-    title: "Survivor Hoboken | Real Survivor Games & Private Events",
-    description: "Play a real Survivor game in Hoboken & NYC, or book a private Survivor experience for your team, party, or event. No cameras, all the strategy.",
+    title: "Survivor Hoboken | Play Live Survivor Games in NJ & NYC",
+    description: "The real Survivor experience brought to life in NJ and NYC. Private parties, birthdays, and corporate team-building events with a real host and custom challenges.",
     canonical: "https://survivorhoboken.com/",
   });
 

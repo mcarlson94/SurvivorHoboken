@@ -45,8 +45,8 @@ const eventTypes = [
 
 export default function PrivateEvents() {
   useSEO({
-    title: "Private Survivor Events in NYC & NJ | Survivor Hoboken",
-    description: "Book a private Survivor experience in NYC or NJ for team building, birthdays, and parties. Real challenges, a real host, unforgettable.",
+    title: "Private Survivor Events & Parties | Survivor Hoboken",
+    description: "Host your own Survivor game. Custom private events for birthdays, bachelor/bachelorette parties, and groups in the NJ/NYC area. Challenges, tribes, and a real host.",
     canonical: "https://survivorhoboken.com/private-events/",
     jsonLd: {
       "@context": "https://schema.org",

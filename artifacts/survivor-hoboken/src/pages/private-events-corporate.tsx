@@ -59,8 +59,8 @@ const perfectFor = [
 
 export default function CorporateEvents() {
   useSEO({
-    title: "Survivor Corporate Team Building | NYC & NJ",
-    description: "Run a real Survivor game with your team. Corporate team building in NYC & NJ with challenges, tribal councils, and a pro host. Get a quote.",
+    title: "Corporate Team-Building Survivor Events | Survivor Hoboken",
+    description: "Survivor-style corporate team-building in NYC and NJ. A three-phase format with custom challenges built for groups up to 30+. Outwit. Outplay. Outwork.",
     canonical: "https://survivorhoboken.com/private-events/corporate/",
   });
 
