@@ -49,8 +49,8 @@ const faqs = [
 
 export default function BachelorParties() {
   useSEO({
-    title: "Survivor Bachelor & Bachelorette Parties | NYC & NJ",
-    description: "Make your bachelor or bachelorette party a real Survivor showdown. Challenges, twists, and a pro host across NYC and NJ.",
+    title: "Bachelor & Bachelorette Survivor Party | NYC, NJ & Beyond",
+    description: "Make your bachelor or bachelorette party a real Survivor game. Hire us and we'll run the whole thing. Challenges, twists, and a pro host across NYC, NJ & beyond.",
     canonical: "https://survivorhoboken.com/private-events/bachelor/",
   });
 
