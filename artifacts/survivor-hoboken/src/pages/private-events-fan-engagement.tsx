@@ -54,8 +54,8 @@ export default function FanEngagement() {
   }, []);
 
   useSEO({
-    title: "Survivor Fan Activations & Events | Survivor Hoboken",
-    description: "Bring a live Survivor activation to your venue, brand, or fan event. Challenges and tribal councils built for crowds, run by a pro host.",
+    title: "Real Survivor Challenges & Jeff Probst-Style Hosts | Fan Activations",
+    description: "Rent real challenges from the show plus Jeff Probst-style hosts who bring the energy. Live Survivor activations for your venue, brand, or fan event.",
     canonical: "https://survivorhoboken.com/private-events/fan-engagement/",
   });
 
