@@ -96,8 +96,8 @@ const faqs = [
 
 export default function PrivateGames() {
   useSEO({
-    title: "Private Survivor Games | Survivor Hoboken",
-    description: "Gather your crew for a private Survivor game. Custom-built challenges and tribal councils run by a pro host in NYC & NJ.",
+    title: "Hire a Jeff Probst Style Host | Private Survivor Games NJ & NYC",
+    description: "Hire a Jeff Probst-style host for a private Survivor game in NJ, NYC & the Northeast. Real challenges, tribal councils, and idols brought to your group.",
     canonical: "https://survivorhoboken.com/private-events/private-games/",
   });
 
