@@ -122,8 +122,8 @@ function BookingSection() {
 
 export default function Challenges() {
   useSEO({
-    title: "Survivor Challenges | Survivor Hoboken",
-    description: "See the immunity challenges, puzzles, and physical tests we run at Survivor Hoboken games and private events. Get a feel for what you'll play.",
+    title: "Realistic Survivor Challenges, NJ & NYC (Rent/Book) | Survivor Hoboken",
+    description: "Rent or book a life-size, realistic Survivor experience in NJ & NYC. Custom challenges, tribal councils, and immunity idols for parties and corporate events.",
     canonical: "https://survivorhoboken.com/challenges/",
   });
 
