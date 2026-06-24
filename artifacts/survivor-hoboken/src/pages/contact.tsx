@@ -65,7 +65,7 @@ export default function Contact() {
                 </li>
                 <li>
                   <span className="font-heading uppercase text-sm text-foreground/60 block mb-1">Service Area</span>
-                  <span className="text-foreground/80">Hoboken · Jersey City · NYC · NJ</span>
+                  <span className="text-foreground/80">Based in Hoboken · Serving the NJ/NY metro and beyond</span>
                 </li>
               </ul>
             </div>
