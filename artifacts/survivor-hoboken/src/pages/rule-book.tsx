@@ -151,8 +151,8 @@ const sections = [
 
 export default function RuleBook() {
   useSEO({
-    title: "Survivor Rule Book: Ties, Revotes & Tribal Council",
-    description: "How Survivor handles a tie at tribal council, revotes, and tiebreakers — plus the full Survivor Hoboken rule book and every twist explained.",
+    title: "Survivor Hoboken Rule Book: Ties, Revotes & Every Twist",
+    description: "The official Survivor Hoboken rule book — how our games handle ties at tribal council, revotes, idols, and every twist we run. The rules for our live NJ & NYC games.",
     canonical: "https://survivorhoboken.com/rule-book/",
     jsonLd: {
       "@context": "https://schema.org",
