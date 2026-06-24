@@ -49,8 +49,8 @@ const faqs = [
 
 export default function BirthdayParties() {
   useSEO({
-    title: "Survivor Birthday Party | Survivor Hoboken",
-    description: "Throw a Survivor-themed birthday party in NYC or NJ. Custom challenges, a tribal council, and a host who runs the whole game for you.",
+    title: "Survivor Birthday Party NJ & NYC (Challenges from the Show)",
+    description: "Throw a Survivor birthday party in NJ or NYC with real challenges from the show, tribal councils, and Jeff Probst-style hosting. We run the whole game.",
     canonical: "https://survivorhoboken.com/private-events/birthday/",
   });
 
