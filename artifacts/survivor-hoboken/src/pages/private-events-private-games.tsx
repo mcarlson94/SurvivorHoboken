@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { HubspotBooking } from "@/components/hubspot-booking";
 import { useSEO } from "@/hooks/use-seo";
+import { PrivateEventVideo } from "@/components/private-event-video";
 import { ChallengeSlider } from "@/components/challenge-slider";
 import { ReviewsSlider, type Review } from "@/components/reviews-slider";
 
@@ -144,6 +145,8 @@ export default function PrivateGames() {
           </motion.a>
         </div>
       </div>
+
+      <PrivateEventVideo src="/videos/corporate-event.mp4" poster="/videos/corporate-event-poster.jpg" portrait />
 
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto max-w-5xl">
